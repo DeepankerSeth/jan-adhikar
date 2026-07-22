@@ -185,6 +185,29 @@ html[lang="hi"] h2 {
 }
 .intro { margin: .75rem 0 0; color: var(--muted); font-size: 1rem; }
 
+.city-select { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin-top: 1rem; }
+.city-label { color: var(--ink); font-size: .85rem; font-weight: 800; }
+.city-chip {
+  min-height: 44px;
+  padding: .5rem .85rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--green);
+  background: var(--card);
+  font-size: .85rem;
+  font-weight: 800;
+  transition: background-color var(--duration) ease-out, border-color var(--duration) ease-out, color var(--duration) ease-out;
+}
+.city-chip:hover { background: var(--soft); border-color: var(--green); }
+.city-chip[aria-pressed="true"] { color: white; background: var(--green); border-color: var(--green); }
+.city-note { flex-basis: 100%; margin-top: .1rem; color: var(--muted); font-size: .8rem; }
+
+.hospital-list { margin: 1rem 0 0; padding: .7rem .85rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--soft); font-size: .88rem; }
+.hospital-list strong { display: block; margin-bottom: .25rem; color: var(--ink); }
+.hospital-list span { color: var(--muted); }
+.first-aid { padding-left: 1.2rem; }
+.first-aid li { margin: .7rem 0; color: var(--muted); }
+
 .routes { display: grid; gap: .55rem; padding: .65rem 0 2rem; }
 .route {
   width: 100%;
@@ -474,10 +497,12 @@ footer small a { min-height: 44px; display: inline-flex; align-items: center; ma
   .route, .call-card, .copy-button, .generate-button, .secondary-button, .back-button, details { border: 1px solid ButtonText; }
 }
 
+.print-card { display: none; }
+
 @media print {
-  body { background: white; }
-  .topbar, .offline-banner, .routes, .help-panel, .after-safe, .other-actions, footer, .offline-actions, .offline-details { display: none !important; }
-  .hero { padding-top: 0; }
-  .offline { display: block; color: black; background: white; border: 2px solid black; }
-  .offline h2, .offline .kicker { color: black; }
+  body { background: white; font-size: 11pt; }
+  .topbar, .offline-banner, .hero, .routes, .help-panel, .after-safe, .other-actions, footer, .offline, .toast { display: none !important; }
+  .print-card { display: block; color: black; }
+  .print-card h2 { color: black; font-size: 16pt; margin-bottom: .5rem; }
+  .print-card p { margin: 0 0 .55rem; color: black; line-height: 1.45; }
 }

@@ -38,6 +38,17 @@ Jan Adhikar is a mobile-first civic safety tool. The interface must help a perso
 - Motion is limited to short state feedback and is removed when `prefers-reduced-motion` is enabled.
 - The emergency call action lives in the header instead of a fixed bottom bar, so it never covers content on short screens.
 
+## City scoping
+
+- One optional decision: three chips (Delhi, Mumbai, Elsewhere in India) at the end of the hero. National actions (112, 15100) are never city-scoped.
+- The static HTML default is the national view; city content appears only after an explicit tap (stored locally, applied on return visits). No location permission, ever.
+- Every city-scoped call card carries its city in the label ("Ambulance — Delhi (CATS)"), so screenshots cannot misroute readers in another city.
+- `data-city-scope` attributes drive visibility; all variants ship in the HTML so offline use is unaffected.
+
+## Print
+
+- Screen sections are hidden in print; a dedicated `.print-card` section prints instead, containing the bilingual essentials (all cities). "Print this page" must always produce a usable paper card with phone numbers.
+
 ## Responsive behavior
 
 - Primary test widths: 320px, 360px, 390px and 430px.
