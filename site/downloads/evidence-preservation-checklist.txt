@@ -1,0 +1,52 @@
+JAN ADHIKAR — EVIDENCE PRESERVATION CHECKLIST
+Last reviewed: 22 July 2026
+
+IMMEDIATE STEPS
+[ ] Put safety and medical care first.
+[ ] Keep the original photo, video, audio or document untouched.
+[ ] Do not crop, filter, annotate, compress, rename or repeatedly export the original.
+[ ] Create a separate working copy for viewing, redaction or public sharing.
+[ ] Back up the original in at least two secure places controlled by trusted people.
+[ ] Record the original filename, file size, format and device used.
+[ ] Record who created it, exact date/time, location and what it depicts.
+[ ] Record whether the creator personally witnessed the event.
+[ ] Obtain the creator's permission before giving the file to others.
+[ ] Record every transfer: from whom, to whom, date/time, method and purpose.
+
+FOR PHOTOS, VIDEO AND AUDIO
+[ ] Preserve embedded metadata where possible.
+[ ] Write a short description without guessing identities or motives.
+[ ] Record visible landmarks, signs, uniforms, vehicles and sequence of events.
+[ ] Preserve footage immediately before and after the key moment.
+[ ] Note whether the device clock was accurate.
+[ ] Do not publish unblurred faces of vulnerable people without consent.
+
+FOR INJURY OR DETENTION
+[ ] Obtain medical records, prescriptions, bills and medico-legal documents.
+[ ] Photograph injuries over time with consent and a date reference.
+[ ] Preserve arrest memo, FIR/DD number, bail papers and court orders.
+[ ] Record police station, officer/unit, time of custody and time of release.
+[ ] Record requests for a lawyer, family contact and medical care, and responses.
+
+SECURE STORAGE
+[ ] Restrict access to named people.
+[ ] Use strong passwords and device encryption.
+[ ] Do not store Aadhaar, medical records, home addresses or detainee data in a public drive.
+[ ] Keep an access log.
+[ ] If technically able, calculate a SHA-256 hash and record it in the chain-of-custody log.
+
+PUBLIC SHARING
+[ ] Share only a redacted copy.
+[ ] Remove addresses, phone numbers, identity numbers and medical details.
+[ ] Blur faces where publication could create danger, stigma or retaliation.
+[ ] Label uncertain details as unverified.
+[ ] Do not accuse a named individual unless identification and facts are supportable.
+[ ] Correct public errors promptly while preserving the original record.
+
+LEGAL HANDOVER
+[ ] Give counsel an indexed copy, not a loose set of links.
+[ ] Retain the untouched original.
+[ ] Identify the person who can verify each item by affidavit or testimony.
+[ ] Ask counsel whether a formal preservation notice should be sent.
+
+This checklist is general legal information, not legal advice. Do not delay emergency, medical or legal assistance to complete documentation.
