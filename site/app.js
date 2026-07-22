@@ -73,31 +73,22 @@ const needLabels = {
 };
 
 const CITIES = ['delhi', 'mumbai', 'other'];
-const cityNames = {
-  delhi: ['Delhi', 'दिल्ली'],
-  mumbai: ['Mumbai', 'मुंबई'],
-  other: ['all-India', 'अखिल भारतीय']
-};
 
 function currentCity() {
   const stored = localStorage.getItem('jan-adhikar-city');
   return CITIES.includes(stored) ? stored : 'other';
 }
 
-function applyCity(city, announce) {
+function applyCity(city) {
   $$('[data-city-scope]').forEach(element => {
     element.hidden = !element.dataset.cityScope.split(' ').includes(city);
   });
   $$('.city-chip').forEach(chip => chip.setAttribute('aria-pressed', String(chip.dataset.city === city)));
-  if (announce) {
-    const name = cityNames[city][currentLanguage() === 'hi' ? 1 : 0];
-    showToast(text(`Showing ${name} contacts. National numbers work everywhere.`, `${name} संपर्क दिखाए जा रहे हैं। राष्ट्रीय नंबर हर जगह काम करते हैं।`));
-  }
 }
 
 function selectCity(city) {
   localStorage.setItem('jan-adhikar-city', city);
-  applyCity(city, true);
+  applyCity(city);
 }
 
 function translatePage() {
@@ -305,7 +296,7 @@ function showToast(message) {
 function init() {
   document.documentElement.dataset.language = localStorage.getItem('jan-adhikar-language') || 'en';
   translatePage();
-  applyCity(currentCity(), false);
+  applyCity(currentCity());
   $$('.city-chip').forEach(chip => chip.addEventListener('click', () => selectCity(chip.dataset.city)));
   $$('.route').forEach(button => button.addEventListener('click', () => openRoute(button.dataset.route, button)));
   $$('[data-close-panel]').forEach(button => button.addEventListener('click', closePanels));
