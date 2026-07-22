@@ -72,6 +72,34 @@ const needLabels = {
   none: ['No immediate need stated', 'कोई तत्काल आवश्यकता नहीं बताई गई']
 };
 
+const CITIES = ['delhi', 'mumbai', 'other'];
+const cityNames = {
+  delhi: ['Delhi', 'दिल्ली'],
+  mumbai: ['Mumbai', 'मुंबई'],
+  other: ['all-India', 'अखिल भारतीय']
+};
+
+function currentCity() {
+  const stored = localStorage.getItem('jan-adhikar-city');
+  return CITIES.includes(stored) ? stored : 'other';
+}
+
+function applyCity(city, announce) {
+  $$('[data-city-scope]').forEach(element => {
+    element.hidden = !element.dataset.cityScope.split(' ').includes(city);
+  });
+  $$('.city-chip').forEach(chip => chip.setAttribute('aria-pressed', String(chip.dataset.city === city)));
+  if (announce) {
+    const name = cityNames[city][currentLanguage() === 'hi' ? 1 : 0];
+    showToast(text(`Showing ${name} contacts. National numbers work everywhere.`, `${name} संपर्क दिखाए जा रहे हैं। राष्ट्रीय नंबर हर जगह काम करते हैं।`));
+  }
+}
+
+function selectCity(city) {
+  localStorage.setItem('jan-adhikar-city', city);
+  applyCity(city, true);
+}
+
 function translatePage() {
   $$('[data-en][data-hi]').forEach(element => {
     element.textContent = currentLanguage() === 'hi' ? element.dataset.hi : element.dataset.en;
@@ -155,6 +183,14 @@ ${data.get('facts')}
 ---------------
 ${data.get('evidence') || 'कोई सूचीबद्ध नहीं'}
 
+साक्ष्य की निगरानी (फ़ोटो/वीडियो हो तो भरें)
+---------------
+रिकॉर्ड किसने किया: [नाम]
+उपकरण: [फ़ोन मॉडल]
+मूल फ़ाइल कहाँ रखी है: [स्थान]
+प्रतियाँ किसे दीं: [किसे, कब]
+मूल फ़ाइल बिना बदले रखें; केवल प्रतियाँ साझा करें।
+
 सुरक्षित संपर्क
 ---------------
 ${data.get('contact') || 'नहीं दिया गया'}
@@ -183,6 +219,14 @@ ${data.get('facts')}
 Evidence available
 ------------------
 ${data.get('evidence') || 'None listed'}
+
+Evidence custody (fill if you have photos/videos)
+------------------
+Recorded by: [name]
+Device: [phone model]
+Original file kept at: [where]
+Copies given to: [who, when]
+Keep the original file unchanged; share copies only.
 
 Safe contact
 ------------
@@ -261,6 +305,8 @@ function showToast(message) {
 function init() {
   document.documentElement.dataset.language = localStorage.getItem('jan-adhikar-language') || 'en';
   translatePage();
+  applyCity(currentCity(), false);
+  $$('.city-chip').forEach(chip => chip.addEventListener('click', () => selectCity(chip.dataset.city)));
   $$('.route').forEach(button => button.addEventListener('click', () => openRoute(button.dataset.route, button)));
   $$('[data-close-panel]').forEach(button => button.addEventListener('click', closePanels));
   $$('[data-copy]').forEach(button => button.addEventListener('click', () => copyTemplate(button.dataset.copy)));

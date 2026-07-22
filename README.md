@@ -22,8 +22,12 @@ The site is not a law firm, emergency service, staffed helpline, court-filing se
 
 The essential page and a bilingual emergency card are cached after a successful connected visit in a supported browser. Users should save the card, keep critical numbers on paper and agree on a meeting point and check-in plan before entering an area with unreliable connectivity.
 
+## Coverage
+
+National emergency and legal-aid routes work everywhere in India. City-specific contacts are provided for Delhi and Mumbai behind a manual city choice that never asks for location permission and defaults to the national view. Cities are added only when their resources are independently verified; an unlisted city does not mean help is unavailable there — the national routes apply.
+
 ## Independence
 
 Jan Adhikar is an independent public-interest project. It is not connected to Libration, any company, political party, government, law firm or legal practice.
 
-Contact and legal-routing information was last checked against official Indian sources on 22 July 2026.
+Contact and legal-routing information was last checked against official Indian sources on 22 July 2026 (see `site/data/resources.json` for per-contact verification dates and `MAINTENANCE.md` for the re-verification plan).

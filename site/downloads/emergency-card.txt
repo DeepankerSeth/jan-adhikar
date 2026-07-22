@@ -1,73 +1,109 @@
 JAN ADHIKAR — PROTEST EMERGENCY CARD
-Verified: 22 July 2026
+Verified: 22 July 2026. Numbers change; helpline short codes are being merged into 112 nationwide.
+IF ANY NUMBER FAILS: 112 (danger) - 15100 (legal aid).
 
-IMMEDIATE DANGER OR SERIOUS INJURY
-Call 112. Move to safety. Do not wait for an email or form.
+== NATIONAL (works everywhere in India) ==
+112 — Police, fire, ambulance. A voice call to 112 needs no internet and no balance. (The 112 phone app needs internet.)
+15100 — National legal-aid helpline (NALSA). Anyone in custody, and every woman, qualifies for free legal services regardless of income.
+14416 — Tele-MANAS mental-health line: free, 24x7, 20 languages.
+Women: 1091 / 181. Children in distress: 1098. If any helpline does not answer, call 112.
+NHRC (human-rights complaint about a public servant): 14433 | hrcnet.nic.in
 
-LEGAL-AID HELPLINES
-15100 — National legal-aid helpline
-1516 — Delhi legal services
-9870101337 — Delhi State Legal Services Authority
-Ask for urgent guidance. A person in custody qualifies for legal services under section 12(g); lawyer assignment in other cases depends on eligibility, case assessment and availability. Email lae-dslsa@gov.in is not an emergency channel.
+== DELHI ==
+Ambulance: 102 (CATS, free) or 112.
+Legal aid (DSLSA): 1516 | 9870101337 | legalaidwing-dslsa@nic.in (email is not an emergency channel)
+Missing person: 1094 (Delhi Police) | online: zipnet.delhipolice.gov.in. For suspected police custody call legal aid and the likely police station or district control room instead; ask for the BNSS section 37 designated officer.
+Government hospitals near the protest area: RML Hospital (Baba Kharak Singh Marg, near Jantar Mantar) | Lady Hardinge (Shaheed Bhagat Singh Marg) | LNJP (Delhi Gate).
+No place to sleep: DUSIB night-shelter helpline 14461 (free).
+Free food, water, washroom: Gurdwara Bangla Sahib langar, Ashoka Road (open to all, daily).
+Delhi Metro status: 155370. Traffic: 1095.
+Serious Delhi Police misconduct (after you are safe): Police Complaints Authority — pca.delhi.gov.in | pca.delhi@delhi.gov.in | 011-21400977 | 10th Floor, Chanderlok Building, Janpath, New Delhi 110001. Signed complaint with sworn affidavit; no anonymous complaints.
 
-KNOWN OR SUSPECTED POLICE CUSTODY
-Call 15100 and the likely police station or district control room. Ask for the BNSS section 37 designated officer and arrest information. Record the full name, last confirmed time/location, station/unit/vehicle, FIR/DD/arrest-memo reference, and every call and response.
+== MUMBAI ==
+Ambulance: 108 (free) or 112. (In Maharashtra 102 is for pregnant women and infants, not injuries.)
+Legal aid: 15100 | Maharashtra legal services 1800-22-23-24.
+Missing person / custody check: report at any police station; Mumbai Police control room (city) 022-22621855; online search of missing and arrested persons: citizen.mahapolice.gov.in (listings can lag by hours; absence from the portal does not mean the person is not in custody). Ask the station for the BNSS section 37 designated officer.
+Government hospitals near the protest area: St George (opp. GPO, near CSMT) | JJ Hospital (Byculla — largest) | GT Hospital (L.T. Marg) | Cama Hospital (opp. Azad Maidan — women and children only).
+Civic emergencies (BMC): 1916.
+Serious police misconduct (after you are safe): Maharashtra State Human Rights Commission — 9, Hajarimal Somani Marg, opp. CSMT, Mumbai 400001 | 022-22076408 | complaint-mshrc@gov.in. (Maharashtra's statutory Police Complaints Authority currently has no official website or verified public intake channel.)
 
-GENUINELY MISSING; NO CUSTODY INFORMATION
-1094 — Delhi Police missing-person helpline. Do not use 1094 merely to confirm a suspected arrest. Call 112 for immediate danger.
+== YOUR RIGHTS IF ARRESTED ==
+Subject to constitutional exceptions: you must be told the grounds of arrest — the Supreme Court requires them in writing, in a language you understand (2025). If police are investigating an offence punishable by up to 7 years, a written notice to appear — not arrest — is the rule (BNSS s.35(3); SC 2026); preventive detention under prohibitory orders is different, but the reason must still be given and detention beyond 24 hours needs separate legal authority. You may consult and be defended by a lawyer of your choice, and meet your lawyer during interrogation (though not throughout it). A person you nominate must be told of the arrest and where you are held. Ask for: the arrest memo; a medical examination that records injuries, with a report copy; production before a magistrate within 24 hours excluding journey time. A woman should not ordinarily be arrested after sunset and before sunrise, except in exceptional circumstances with a magistrate's permission. A minor cannot be kept in a police lockup or jail — Juvenile Justice Board within 24 hours, guardian informed, free legal aid automatic.
+Helplines can go unanswered at night. Log every call you try (time, number); the 24-hour magistrate rule protects an arrested person regardless.
 
-AFTER ARREST
-Subject to constitutional exceptions, the arrested person must be told the grounds; has the right to consult and be defended by a lawyer of choice; and must be produced before the nearest magistrate within 24 hours excluding journey time. Ask for the arrest memo; immediate notice to the nominated person of both arrest and place of custody; a medical examination recording injuries and a report copy; and an opportunity to meet an advocate during interrogation, though not throughout it.
+== IF YOU ARE HURT ==
+No hospital — government or private — may refuse emergency treatment. You are entitled to have a medico-legal case (MLC) registered: the official record of your injuries for any later complaint. An MLC means the police are informed. If registered, note the MLC number and keep treatment records and prescriptions.
+Tear gas: get to fresh air. Rinse eyes with plain water for 10-15 minutes; remove contact lenses; do not rub. Do not use milk. Remove and bag contaminated clothing; wash skin with soap and water. (CDC and clinical guidance)
+Heat: shade and sips of water. Confusion, hot dry skin or fainting = emergency: call 112 and cool the person with wet cloths and fanning. (WHO guidance)
+Dense crowds: know the exits, stay near the edges, keep your arms in front of your chest; if you fall, curl up and protect your head.
+Panic: breathe in and out slowly, counting to five. It usually passes in minutes. Tele-MANAS 14416.
 
-PRESERVE EVIDENCE
-Get safe first. Keep the original file untouched. Record who created it, date/time, exact location and what the person personally witnessed. Keep an unedited private copy. Do not publish faces, live locations, medical records or contact details without consent.
+== PREPARE BEFORE YOU GO ==
+1. Charge and back up your phone.
+2. Write key numbers on paper: 112, legal aid, one trusted person.
+3. Agree a meeting point and fixed check-in times that work with no network at all.
+4. Strong PIN; consider switching off fingerprint/face unlock and lock-screen previews for the day.
+5. Check what auto-uploads from your phone before recording anything sensitive.
+6. Do not post live locations; share after leaving the area, minding faces and consent.
+Mobile data can be suspended during protests; voice calls and person-to-person SMS usually keep working — but near a police action even calls can fail. Never make a phone call your only plan. A call to 112 needs no internet.
 
-SERIOUS DELHI POLICE MISCONDUCT
-Police Complaints Authority: https://pca.delhi.gov.in/pca/contact-us
-pca.delhi@delhi.gov.in | 011-21400977
-10th Floor, Chanderlok Building, Janpath, New Delhi 110001
-For the PCA's defined serious-misconduct categories. A victim/representative complaint should be signed and supported by a sworn affidavit; anonymous complaints are excluded. PCA may not entertain a matter already before a court, NHRC or another statutory body. Email is not proof of registration: ask for acknowledgment and call to confirm.
-
-HUMAN-RIGHTS COMPLAINT INVOLVING A PUBLIC SERVANT
-NHRC help: 14433 | https://www.hrcnet.nic.in/HRCNet/public/webcomplaint.aspx
-For violation or abetment by a public servant, or public-servant negligence in preventing one. NHRC is not emergency dispatch and its actions are principally inquiries and recommendations, not guaranteed compensation or prosecution.
+== EVIDENCE ==
+Get safe first. Keep the original file unchanged on the device that recorded it; a WhatsApp forward must not be your only copy (forwarding strips metadata). Note who recorded it, date/time, exact place, device, and every copy given to anyone. Share copies privately with a lawyer or authority — do not publish faces, live locations or medical records without consent.
 
 This card is public legal information, not a lawyer, staffed helpline or emergency service.
 
 ============================================================
 
 JAN ADHIKAR — प्रदर्शन आपात कार्ड
-सत्यापित: 22 जुलाई 2026
+सत्यापित: 22 जुलाई 2026। नंबर बदल सकते हैं; हेल्पलाइन शॉर्ट कोड देशभर में 112 में मिलाए जा रहे हैं।
+कोई नंबर न चले तो: 112 (खतरा) - 15100 (कानूनी सहायता)।
 
-तत्काल खतरा या गंभीर चोट
-112 पर कॉल करें। सुरक्षित स्थान जाएँ। ईमेल या फ़ॉर्म की प्रतीक्षा न करें।
+== राष्ट्रीय (पूरे भारत में) ==
+112 — पुलिस, अग्निशमन, एम्बुलेंस। 112 पर आवाज़-कॉल के लिए इंटरनेट या बैलेंस ज़रूरी नहीं। (112 ऐप को इंटरनेट चाहिए।)
+15100 — राष्ट्रीय कानूनी सहायता हेल्पलाइन (NALSA)। हिरासत में कोई भी व्यक्ति और हर महिला, आय चाहे जो हो, निःशुल्क कानूनी सेवा की पात्र है।
+14416 — Tele-MANAS मानसिक स्वास्थ्य लाइन: निःशुल्क, 24x7, 20 भाषाएँ।
+महिला: 1091 / 181। संकट में बच्चे: 1098। कोई हेल्पलाइन न उठे तो 112 पर कॉल करें।
+NHRC (लोक सेवक से जुड़ी मानवाधिकार शिकायत): 14433 | hrcnet.nic.in
 
-कानूनी सहायता हेल्पलाइन
-15100 — राष्ट्रीय कानूनी सहायता हेल्पलाइन
-1516 — दिल्ली कानूनी सेवाएँ
-9870101337 — दिल्ली राज्य विधिक सेवा प्राधिकरण
-तत्काल मार्गदर्शन माँगें। हिरासत में व्यक्ति धारा 12(g) के तहत कानूनी सेवाओं का पात्र है; अन्य मामलों में वकील मिलना पात्रता, मामले के आकलन और उपलब्धता पर निर्भर है। lae-dslsa@gov.in आपात माध्यम नहीं है।
+== दिल्ली ==
+एम्बुलेंस: 102 (CATS, निःशुल्क) या 112।
+कानूनी सहायता (DSLSA): 1516 | 9870101337 | legalaidwing-dslsa@nic.in (ईमेल आपात माध्यम नहीं है)
+गुमशुदा व्यक्ति: 1094 (दिल्ली पुलिस) | ऑनलाइन: zipnet.delhipolice.gov.in। पुलिस हिरासत की आशंका हो तो इसके बजाय कानूनी सहायता और संभावित थाना/जिला नियंत्रण कक्ष को कॉल करें; BNSS धारा 37 के नामित अधिकारी को पूछें।
+प्रदर्शन क्षेत्र के पास सरकारी अस्पताल: RML अस्पताल (बाबा खड़क सिंह मार्ग, जंतर मंतर के पास) | लेडी हार्डिंग (शहीद भगत सिंह मार्ग) | LNJP (दिल्ली गेट)।
+रात में ठिकाना नहीं: DUSIB रैन बसेरा हेल्पलाइन 14461 (निःशुल्क)।
+निःशुल्क भोजन, पानी, शौचालय: गुरुद्वारा बंगला साहिब लंगर, अशोका रोड (सबके लिए, प्रतिदिन)।
+दिल्ली मेट्रो स्थिति: 155370। ट्रैफ़िक: 1095।
+दिल्ली पुलिस का गंभीर दुराचार (सुरक्षित होने के बाद): पुलिस शिकायत प्राधिकरण — pca.delhi.gov.in | pca.delhi@delhi.gov.in | 011-21400977 | 10वीं मंज़िल, चंदरलोक भवन, जनपथ, नई दिल्ली 110001। हस्ताक्षरित शिकायत शपथपत्र सहित; गुमनाम शिकायत नहीं।
 
-ज्ञात या संदिग्ध पुलिस हिरासत
-15100 और संभावित पुलिस थाना या जिला नियंत्रण कक्ष को कॉल करें। BNSS धारा 37 के नामित अधिकारी और गिरफ्तारी की जानकारी माँगें। पूरा नाम, अंतिम पुष्ट समय/स्थान, थाना/इकाई/वाहन, FIR/DD/गिरफ्तारी मेमो संदर्भ, और हर कॉल व उत्तर दर्ज करें।
+== मुंबई ==
+एम्बुलेंस: 108 (निःशुल्क) या 112। (महाराष्ट्र में 102 गर्भवती महिलाओं और शिशुओं के लिए है, चोट के लिए नहीं।)
+कानूनी सहायता: 15100 | महाराष्ट्र विधिक सेवा 1800-22-23-24।
+गुमशुदा व्यक्ति / हिरासत की जाँच: किसी भी थाने में सूचना दें; मुंबई पुलिस नियंत्रण कक्ष (सिटी) 022-22621855; गुमशुदा और गिरफ्तार व्यक्तियों की ऑनलाइन खोज: citizen.mahapolice.gov.in (नाम आने में घंटों की देरी संभव; पोर्टल में नाम न होने का अर्थ यह नहीं कि व्यक्ति हिरासत में नहीं है)। थाने में BNSS धारा 37 के नामित अधिकारी को पूछें।
+प्रदर्शन क्षेत्र के पास सरकारी अस्पताल: सेंट जॉर्ज (GPO के सामने, CSMT के पास) | JJ अस्पताल (भायखला — सबसे बड़ा) | GT अस्पताल (एल.टी. मार्ग) | कामा अस्पताल (आज़ाद मैदान के सामने — केवल महिलाएँ और बच्चे)।
+नागरिक आपात (BMC): 1916।
+पुलिस का गंभीर दुराचार (सुरक्षित होने के बाद): महाराष्ट्र राज्य मानवाधिकार आयोग — 9, हजारीमल सोमानी मार्ग, CSMT के सामने, मुंबई 400001 | 022-22076408 | complaint-mshrc@gov.in। (महाराष्ट्र के वैधानिक पुलिस शिकायत प्राधिकरण की फ़िलहाल कोई आधिकारिक वेबसाइट या सत्यापित सार्वजनिक शिकायत-माध्यम नहीं है।)
 
-सच में लापता; हिरासत की जानकारी नहीं
-1094 — दिल्ली पुलिस गुमशुदा व्यक्ति हेल्पलाइन। केवल संदिग्ध गिरफ्तारी की पुष्टि के लिए 1094 का उपयोग न करें। तत्काल खतरे में 112 पर कॉल करें।
+== गिरफ्तारी पर आपके अधिकार ==
+संवैधानिक अपवादों के अधीन: गिरफ्तारी के कारण बताए जाने चाहिए — सुप्रीम कोर्ट के अनुसार लिखित रूप में, ऐसी भाषा में जो आप समझते हों (2025)। अगर पुलिस ऐसे अपराध की जाँच कर रही है जिसका दंड 7 वर्ष तक है, तो गिरफ्तारी के बजाय पेश होने का लिखित नोटिस नियम है (BNSS धारा 35(3); SC 2026); निषेधाज्ञा के दौरान एहतियातन हिरासत अलग है, पर कारण फिर भी बताना होगा और 24 घंटे से अधिक हिरासत के लिए अलग कानूनी आधार चाहिए। आप अपनी पसंद के वकील से परामर्श और बचाव कर सकते हैं, और पूछताछ के दौरान वकील से मिल सकते हैं (पूरी पूछताछ में नहीं)। आपके नामित व्यक्ति को गिरफ्तारी और हिरासत स्थान की सूचना दी जानी चाहिए। माँगें: गिरफ्तारी मेमो; चोटें दर्ज करने वाली मेडिकल जाँच और रिपोर्ट की प्रति; यात्रा समय छोड़कर 24 घंटे में मजिस्ट्रेट के सामने पेशी। महिला को सामान्यतः सूर्यास्त के बाद और सूर्योदय से पहले गिरफ्तार नहीं किया जाना चाहिए — असाधारण परिस्थितियों में मजिस्ट्रेट की अनुमति से ही। नाबालिग को थाने के लॉकअप या जेल में नहीं रखा जा सकता — 24 घंटे में किशोर न्याय बोर्ड, अभिभावक को सूचना, निःशुल्क कानूनी सहायता अनिवार्य।
+रात में हेल्पलाइन का उत्तर न मिल सकता है। हर कोशिश की गई कॉल का समय और नंबर लिखें; 24 घंटे में मजिस्ट्रेट का नियम हर हाल में लागू रहता है।
 
-गिरफ्तारी के बाद
-संवैधानिक अपवादों के अधीन, गिरफ्तार व्यक्ति को कारण बताया जाना चाहिए; अपनी पसंद के वकील से परामर्श और बचाव का अधिकार है; और यात्रा समय छोड़कर 24 घंटे में निकटतम मजिस्ट्रेट के सामने पेश किया जाना चाहिए। गिरफ्तारी मेमो; नामित व्यक्ति को गिरफ्तारी और हिरासत स्थान की तुरंत सूचना; चोटें दर्ज करने वाली मेडिकल जाँच और रिपोर्ट की प्रति; तथा पूछताछ के दौरान—पूरी पूछताछ में नहीं—वकील से मिलने का अवसर माँगें।
+== चोट लगने पर ==
+कोई भी अस्पताल — सरकारी या निजी — आपातकालीन इलाज से मना नहीं कर सकता। आप MLC (मेडिको-लीगल केस) दर्ज कराने के हक़दार हैं: यह चोटों का आधिकारिक रिकॉर्ड है जो बाद की शिकायत में काम आता है। ध्यान रहे, MLC दर्ज होने पर पुलिस को सूचना जाती है। दर्ज हो तो MLC नंबर लिखें और इलाज के रिकॉर्ड व पर्चे सँभालें।
+आँसू गैस: खुली हवा में जाएँ। आँखें 10-15 मिनट सादे पानी से धोएँ; कॉन्टैक्ट लेंस निकालें; आँखें न मलें। दूध का उपयोग न करें। प्रभावित कपड़े उतारकर थैले में रखें; त्वचा साबुन-पानी से धोएँ। (CDC व चिकित्सकीय मार्गदर्शन)
+गर्मी: छाँव और धीरे-धीरे पानी। उलझन, गर्म सूखी त्वचा या बेहोशी आपातकाल है — 112 पर कॉल करें, गीले कपड़े और हवा से शरीर ठंडा करें। (WHO मार्गदर्शन)
+घनी भीड़: निकास पहचानें, किनारे की ओर रहें, बाँहें छाती के आगे रखें; गिरें तो सिकुड़कर सिर की रक्षा करें।
+घबराहट: पाँच तक गिनते हुए धीरे-धीरे साँस लें-छोड़ें। यह प्रायः कुछ मिनटों में शांत होती है। Tele-MANAS 14416।
 
-साक्ष्य सुरक्षित रखें
-पहले सुरक्षित हों। मूल फ़ाइल न बदलें। बनाने वाला व्यक्ति, तारीख/समय, सटीक स्थान और उसने स्वयं क्या देखा, दर्ज करें। बिना बदली निजी प्रति रखें। बिना सहमति चेहरे, लाइव स्थान, मेडिकल रिकॉर्ड या संपर्क विवरण सार्वजनिक न करें।
+== जाने से पहले तैयारी ==
+1. फ़ोन चार्ज करें और बैकअप लें।
+2. मुख्य नंबर कागज़ पर लिखें: 112, कानूनी सहायता, एक भरोसेमंद व्यक्ति।
+3. ऐसी मिलने की जगह और तय संपर्क-समय तय करें जो बिना नेटवर्क भी काम करें।
+4. मज़बूत PIN; उस दिन फ़िंगरप्रिंट/फेस अनलॉक और लॉक-स्क्रीन प्रीव्यू बंद करने पर विचार करें।
+5. संवेदनशील रिकॉर्डिंग से पहले देखें कि फ़ोन से क्या अपने आप क्लाउड में जाता है।
+6. लाइव लोकेशन पोस्ट न करें; क्षेत्र छोड़ने के बाद, चेहरों और सहमति का ध्यान रखकर साझा करें।
+प्रदर्शनों के दौरान मोबाइल डेटा बंद किया जा सकता है; आवाज़-कॉल और सामान्य SMS प्रायः चलते रहते हैं — पर पुलिस कार्रवाई के पास कभी-कभी कॉल भी विफल हो सकती है। फ़ोन कॉल को कभी अपनी एकमात्र योजना न बनाएँ। 112 की कॉल को इंटरनेट नहीं चाहिए।
 
-दिल्ली पुलिस का गंभीर दुराचार
-पुलिस शिकायत प्राधिकरण: https://pca.delhi.gov.in/pca/contact-us
-pca.delhi@delhi.gov.in | 011-21400977
-10th Floor, Chanderlok Building, Janpath, New Delhi 110001
-PCA की परिभाषित गंभीर-दुराचार श्रेणियों के लिए। पीड़ित/प्रतिनिधि की शिकायत हस्ताक्षरित और शपथपत्र सहित होनी चाहिए; गुमनाम शिकायतें बाहर हैं। अदालत, NHRC या अन्य वैधानिक निकाय में लंबित मामला PCA स्वीकार न करे। ईमेल पंजीकरण का प्रमाण नहीं है: पावती माँगें और फोन से पुष्टि करें।
-
-लोक सेवक से जुड़ी मानवाधिकार शिकायत
-NHRC सहायता: 14433 | https://www.hrcnet.nic.in/HRCNet/public/webcomplaint.aspx
-लोक सेवक द्वारा उल्लंघन या दुष्प्रेरण, या उल्लंघन रोकने में लोक सेवक की लापरवाही के लिए। NHRC आपात सेवा नहीं है और इसकी कार्रवाई मुख्यतः जाँच व सिफारिश है, मुआवज़ा या अभियोजन की गारंटी नहीं।
+== साक्ष्य ==
+पहले सुरक्षित हों। मूल फ़ाइल उसी उपकरण पर बिना बदले रखें; WhatsApp फ़ॉरवर्ड आपकी एकमात्र प्रति न हो (फ़ॉरवर्ड में मेटाडेटा हट जाता है)। किसने रिकॉर्ड किया, तारीख/समय, सटीक स्थान, उपकरण और हर दी गई प्रति नोट करें। प्रतियाँ वकील या प्राधिकरण से निजी रूप से साझा करें — बिना सहमति चेहरे, लाइव लोकेशन या मेडिकल रिकॉर्ड सार्वजनिक न करें।
 
 यह कार्ड सार्वजनिक कानूनी जानकारी है, वकील, संचालित हेल्पलाइन या आपात सेवा नहीं।
