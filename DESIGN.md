@@ -1,13 +1,13 @@
-# Jan Adhikar design system
+# Adhikar Sathi design system
 
-Jan Adhikar is a mobile-first civic safety tool. The interface must help a person under stress identify the correct next action in seconds.
+Adhikar Sathi is a mobile-first civic safety tool. The interface must help a person under stress identify the correct next action in seconds.
 
 ## Product rules
 
 1. Safety and human help come before documentation or complaints.
 2. The first screen presents exactly four pathways, in a fixed order.
 3. Legal detail stays behind clear disclosure controls until requested.
-4. No interface may imply that Jan Adhikar dispatches help, assigns a lawyer, files a case or receives evidence.
+4. No interface may imply that Adhikar Sathi dispatches help, assigns a lawyer, files a case or receives evidence.
 5. The page remains usable without remote fonts, images, frameworks, analytics or third-party scripts.
 
 ## Visual system

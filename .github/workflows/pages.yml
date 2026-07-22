@@ -1,4 +1,4 @@
-name: Deploy Jan Adhikar to GitHub Pages
+name: Deploy Adhikar Sathi to GitHub Pages
 
 on:
   push:
