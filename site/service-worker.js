@@ -1,4 +1,4 @@
-const CACHE = 'adhikar-sathi-ui-v6';
+const CACHE = 'adhikar-sathi-ui-v7';
 const ESSENTIAL = [
   './',
   './index.html',
