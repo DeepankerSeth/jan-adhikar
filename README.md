@@ -1,36 +1,29 @@
 # Jan Adhikar / जन अधिकार
 
-Jan Adhikar is a free, nonpartisan civic-action and legal-information toolkit for people in India. It helps users organize accurate facts, preserve evidence, generate individualized drafts, and reach the appropriate official channel.
+Jan Adhikar is a fast, nonpartisan protest-support and legal-information resource for people in India.
 
 Live site: https://deepankerseth.github.io/jan-adhikar/
 
-## What it includes
+The site is deliberately narrow. It helps a person answer one question: **What do I need in the next five minutes?**
 
-- NHRC human-rights complaint generator
-- Delhi Police, Vigilance and Police Complaints Authority routing, plus a custody-inquiry generator
-- Letter to the Chief Justice requesting PIL screening, clearly marked as general correspondence rather than a filing
-- SCLSC and DSLSA legal-aid request generator, including the SCLSC no-PIL limitation
-- NEET (UG) candidate grievance generator
-- Central RTI request generator
-- Witness statement and evidence-preservation tools
-- Verified official contacts in English and Hindi
+- Immediate danger or injury: call emergency services and get medical help.
+- Detained or missing person: reach legal aid and create a custody record.
+- Need urgent legal help: use verified legal-services helplines and a short call script.
+- Record what happened: create one accurate incident note locally on the device.
+- Once safe: route serious police misconduct or human-rights complaints to the appropriate official channel.
 
-## Privacy
+## Privacy and safety
 
-The site has no account system, client-side analytics, advertising, server-side form handler, or evidence upload. Drafts are generated in the visitor's browser. Information leaves the page only when the visitor chooses to copy, download, print, or open an external email app or official portal. GitHub Pages and network providers may process standard request logs under their own policies.
+There are no accounts, client-side analytics, server forms, evidence uploads or case databases. Form content is processed in the browser and is not sent to Jan Adhikar. GitHub Pages and network providers may process standard request logs under their own policies.
 
-Do not enter sensitive information on a shared or untrusted device. Review recipients, attachments, and personal details before sending anything.
+The site is not a law firm, emergency service, staffed helpline, court-filing service or evidence repository. It does not promise that help will be dispatched. Immediate danger should never wait for an email or form.
 
-## Important limits
+## Offline use
 
-This is public legal information and document-preparation assistance. It is not a law firm, emergency service, court-filing service, or evidence repository. It cannot prove an allegation, start a court case, or guarantee that an authority will act. For arrest, detention, disappearance, serious injury, or immediate danger, contact emergency services and a qualified lawyer or legal-services authority without waiting for an email response.
-
-Contact details and legal-routing information were last checked against official Indian sources on 22 July 2026. Government channels can change, so users should recheck official sources before a large campaign.
+The essential page and a bilingual emergency card are cached after a successful connected visit in a supported browser. Users should save the card, keep critical numbers on paper and agree on a meeting point and check-in plan before entering an area with unreliable connectivity.
 
 ## Independence
 
-Jan Adhikar is an independent public-interest project. It is not connected to Libration or any company, political party, government, or legal practice.
+Jan Adhikar is an independent public-interest project. It is not connected to Libration, any company, political party, government, law firm or legal practice.
 
-## Deployment
-
-The public site is in `site/`. GitHub Actions deploys that directory to GitHub Pages after changes to `main`.
+Contact and legal-routing information was last checked against official Indian sources on 22 July 2026.
