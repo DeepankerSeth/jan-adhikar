@@ -4,6 +4,8 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const currentLanguage = () => document.documentElement.dataset.language || 'en';
 const text = (en, hi) => currentLanguage() === 'hi' ? hi : en;
+const scrollBehavior = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+let lastRouteButton = null;
 
 const templates = {
   emergency: {
@@ -76,6 +78,8 @@ function translatePage() {
   });
   document.documentElement.lang = currentLanguage() === 'hi' ? 'hi' : 'en';
   $('#languageToggle').textContent = currentLanguage() === 'hi' ? 'English' : 'हिन्दी';
+  $('#languageToggle').setAttribute('aria-label', text('Switch to Hindi', 'अंग्रेज़ी में बदलें'));
+  $('#headerEmergency').setAttribute('aria-label', text('Call emergency number 112', 'आपात नंबर 112 पर कॉल करें'));
   updateNetworkStatus();
 }
 
@@ -85,21 +89,27 @@ function switchLanguage() {
   translatePage();
 }
 
-function openRoute(name) {
+function openRoute(name, trigger) {
+  lastRouteButton = trigger || $(`[data-route="${name}"]`);
   $$('.help-panel').forEach(panel => { panel.hidden = true; });
+  $$('.route').forEach(button => button.setAttribute('aria-expanded', 'false'));
   const panel = $(`#panel-${name}`);
   if (!panel) return;
+  lastRouteButton?.setAttribute('aria-expanded', 'true');
   panel.hidden = false;
   panel.focus({ preventScroll: true });
-  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  panel.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
 }
 
 function closePanels() {
   $$('.help-panel').forEach(panel => { panel.hidden = true; });
-  $('.routes').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  $$('.route').forEach(button => button.setAttribute('aria-expanded', 'false'));
+  const target = lastRouteButton || $('.routes');
+  target.focus?.({ preventScroll: true });
+  target.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
 }
 
-async function copyText(value) {
+async function copyText(value, message) {
   try {
     await navigator.clipboard.writeText(value);
   } catch (_) {
@@ -113,12 +123,12 @@ async function copyText(value) {
     document.execCommand('copy');
     area.remove();
   }
-  showToast(text('Copied. Review and fill every bracket before sending.', 'कॉपी हो गया। भेजने से पहले हर कोष्ठक भरें और जाँचें।'));
+  showToast(message || text('Copied.', 'कॉपी हो गया।'));
 }
 
 function copyTemplate(key) {
   const template = templates[key]?.[currentLanguage()];
-  if (template) copyText(template);
+  if (template) copyText(template, text('Message copied. Fill every bracket before sending.', 'संदेश कॉपी हो गया। भेजने से पहले हर कोष्ठक भरें।'));
 }
 
 function incidentNote(data) {
@@ -191,7 +201,9 @@ function generateIncident(event) {
   if (!form.reportValidity()) return;
   $('#incidentText').value = incidentNote(new FormData(form));
   $('#incidentOutput').hidden = false;
-  $('#incidentOutput').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  $$('#incidentForm [aria-invalid="true"]').forEach(field => field.removeAttribute('aria-invalid'));
+  $('#incidentOutput').scrollIntoView({ behavior: scrollBehavior(), block: 'nearest' });
+  $('.success-message').focus({ preventScroll: true });
 }
 
 function downloadIncident() {
@@ -203,7 +215,8 @@ function downloadIncident() {
   link.href = url;
   link.download = `jan-adhikar-incident-${new Date().toISOString().slice(0, 10)}.txt`;
   link.click();
-  URL.revokeObjectURL(url);
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  showToast(text('Incident note downloaded to this device.', 'घटना नोट इस उपकरण पर डाउनलोड हो गया।'));
 }
 
 async function shareSite() {
@@ -215,15 +228,26 @@ async function shareSite() {
   if (navigator.share) {
     try { await navigator.share(shareData); } catch (_) { return; }
   } else {
-    await copyText(shareData.url);
+    await copyText(shareData.url, text('Link copied.', 'लिंक कॉपी हो गया।'));
   }
 }
 
 function updateNetworkStatus() {
   const status = $('#networkStatus');
+  const banner = $('#offlineBanner');
   const online = navigator.onLine;
   status.textContent = online ? text('Online', 'ऑनलाइन') : text('Offline copy', 'ऑफ़लाइन प्रति');
   status.classList.toggle('offline', !online);
+  banner.hidden = online;
+}
+
+function handleInvalid(event) {
+  event.target.setAttribute('aria-invalid', 'true');
+  showToast(text('Complete the highlighted required field.', 'चिन्हित आवश्यक फ़ील्ड पूरा करें।'));
+}
+
+function clearInvalid(event) {
+  event.target.removeAttribute?.('aria-invalid');
 }
 
 function showToast(message) {
@@ -237,17 +261,22 @@ function showToast(message) {
 function init() {
   document.documentElement.dataset.language = localStorage.getItem('jan-adhikar-language') || 'en';
   translatePage();
-  $$('.route').forEach(button => button.addEventListener('click', () => openRoute(button.dataset.route)));
+  $$('.route').forEach(button => button.addEventListener('click', () => openRoute(button.dataset.route, button)));
   $$('[data-close-panel]').forEach(button => button.addEventListener('click', closePanels));
   $$('[data-copy]').forEach(button => button.addEventListener('click', () => copyTemplate(button.dataset.copy)));
   $('#languageToggle').addEventListener('click', switchLanguage);
   $('#incidentForm').addEventListener('submit', generateIncident);
-  $('#copyIncident').addEventListener('click', () => copyText($('#incidentText').value));
+  $('#incidentForm').addEventListener('invalid', handleInvalid, true);
+  $('#incidentForm').addEventListener('input', clearInvalid);
+  $('#copyIncident').addEventListener('click', () => copyText($('#incidentText').value, text('Incident note copied. Review it before sharing.', 'घटना नोट कॉपी हो गया। साझा करने से पहले जाँचें।')));
   $('#downloadIncident').addEventListener('click', downloadIncident);
   $('#printCard').addEventListener('click', () => window.print());
   $('#shareButton')?.addEventListener('click', shareSite);
   window.addEventListener('online', updateNetworkStatus);
   window.addEventListener('offline', updateNetworkStatus);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && $$('.help-panel').some(panel => !panel.hidden)) closePanels();
+  });
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
     navigator.serviceWorker.register('./service-worker.js').catch(() => {});
   }

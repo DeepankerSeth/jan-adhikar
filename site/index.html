@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#132f2a">
+  <meta name="theme-color" content="#103a32">
   <meta name="description" content="Fast protest safety, detention, legal-aid and evidence help for people in India.">
   <meta property="og:title" content="Jan Adhikar — Help when it matters">
   <meta property="og:description" content="Emergency help, detention support, legal aid and a safe incident record—without an account or data upload.">
   <title>Jan Adhikar — Protest help when it matters</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23132f2a'/><text x='32' y='44' text-anchor='middle' font-size='40' fill='white'>J</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23103a32'/><text x='32' y='44' text-anchor='middle' font-size='40' fill='white'>J</text></svg>">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to help</a>
+  <a class="skip-link" href="#main" data-en="Skip to help" data-hi="सहायता पर जाएँ">Skip to help</a>
 
   <header class="topbar">
     <a class="brand" href="#main" aria-label="Jan Adhikar home">
@@ -22,50 +22,53 @@
     <div class="top-actions">
       <span class="network" id="networkStatus" role="status">Online</span>
       <a class="quiet-button" href="#offline" data-en="Save offline" data-hi="ऑफ़लाइन सहेजें">Save offline</a>
+      <a class="header-emergency" id="headerEmergency" href="tel:112" aria-label="Call emergency number 112">
+        <span data-en="Emergency" data-hi="आपात">Emergency</span><strong>112</strong>
+      </a>
       <button class="quiet-button" id="languageToggle" type="button" aria-label="Switch language">हिन्दी</button>
     </div>
   </header>
+
+  <div class="offline-banner" id="offlineBanner" role="status" hidden>
+    <strong data-en="Offline copy" data-hi="ऑफ़लाइन प्रति">Offline copy</strong>
+    <span data-en="Saved information is available. Contact details may change." data-hi="सहेजी जानकारी उपलब्ध है। संपर्क विवरण बदल सकते हैं।">Saved information is available. Contact details may change.</span>
+  </div>
 
   <main id="main">
     <section class="hero">
       <p class="kicker" data-en="Fast help during a protest" data-hi="प्रदर्शन के दौरान तेज़ सहायता">Fast help during a protest</p>
       <h1 data-en="What do you need in the next five minutes?" data-hi="अगले पाँच मिनट में आपको क्या चाहिए?">What do you need in the next five minutes?</h1>
       <p class="intro" data-en="Choose one for the next useful action." data-hi="अगली उपयोगी कार्रवाई के लिए एक विकल्प चुनें।">Choose one for the next useful action.</p>
-      <div class="emergency-strip">
-        <span data-en="Immediate danger?" data-hi="तत्काल खतरा?">Immediate danger?</span>
-        <a href="tel:112"><strong>Call 112</strong></a>
-        <small data-en="Do not wait for an email or form." data-hi="ईमेल या फ़ॉर्म की प्रतीक्षा न करें।">Do not wait for an email or form.</small>
-      </div>
     </section>
 
     <section class="routes" aria-labelledby="route-title">
       <h2 id="route-title" class="sr-only">Choose help</h2>
-      <button class="route danger" type="button" data-route="danger" aria-controls="panel-danger">
+      <button class="route danger" type="button" data-route="danger" aria-controls="panel-danger" aria-expanded="false">
         <span class="route-number">1</span>
         <span><strong data-en="Someone is hurt or in danger" data-hi="कोई घायल है या खतरे में है">Someone is hurt or in danger</strong><small data-en="Emergency, medical care, safety" data-hi="आपातकाल, चिकित्सा, सुरक्षा">Emergency, medical care, safety</small></span>
-        <span aria-hidden="true">→</span>
+        <span class="route-arrow" aria-hidden="true">›</span>
       </button>
-      <button class="route custody" type="button" data-route="custody" aria-controls="panel-custody">
+      <button class="route custody" type="button" data-route="custody" aria-controls="panel-custody" aria-expanded="false">
         <span class="route-number">2</span>
         <span><strong data-en="Someone is detained or missing" data-hi="कोई हिरासत में है या लापता है">Someone is detained or missing</strong><small data-en="Choose the correct route before calling" data-hi="कॉल से पहले सही रास्ता चुनें">Choose the correct route before calling</small></span>
-        <span aria-hidden="true">→</span>
+        <span class="route-arrow" aria-hidden="true">›</span>
       </button>
-      <button class="route lawyer" type="button" data-route="lawyer" aria-controls="panel-lawyer">
+      <button class="route lawyer" type="button" data-route="lawyer" aria-controls="panel-lawyer" aria-expanded="false">
         <span class="route-number">3</span>
         <span><strong data-en="I need legal help now" data-hi="मुझे अभी कानूनी सहायता चाहिए">I need legal help now</strong><small data-en="Legal-aid helplines and what to say" data-hi="कानूनी सहायता हेल्पलाइन और क्या कहना है">Legal-aid helplines and what to say</small></span>
-        <span aria-hidden="true">→</span>
+        <span class="route-arrow" aria-hidden="true">›</span>
       </button>
-      <button class="route record" type="button" data-route="record" aria-controls="panel-record">
+      <button class="route record" type="button" data-route="record" aria-controls="panel-record" aria-expanded="false">
         <span class="route-number">4</span>
         <span><strong data-en="I need to record what happened" data-hi="जो हुआ उसे दर्ज करना है">I need to record what happened</strong><small data-en="Create one accurate incident note on this device" data-hi="इस उपकरण पर एक सही घटना नोट बनाएँ">Create one accurate incident note on this device</small></span>
-        <span aria-hidden="true">→</span>
+        <span class="route-arrow" aria-hidden="true">›</span>
       </button>
     </section>
 
-    <section class="help-panel danger-panel" id="panel-danger" hidden tabindex="-1">
+    <section class="help-panel danger-panel" id="panel-danger" hidden tabindex="-1" aria-labelledby="danger-title">
       <div class="panel-heading">
         <p class="kicker" data-en="Do this now" data-hi="अभी यह करें">Do this now</p>
-        <h2 data-en="Get safe. Get medical help. Tell one trusted person." data-hi="सुरक्षित हों। चिकित्सा लें। एक भरोसेमंद व्यक्ति को बताएं।">Get safe. Get medical help. Tell one trusted person.</h2>
+        <h2 id="danger-title" data-en="Get safe. Get medical help. Tell one trusted person." data-hi="सुरक्षित हों। चिकित्सा लें। एक भरोसेमंद व्यक्ति को बताएं।">Get safe. Get medical help. Tell one trusted person.</h2>
       </div>
       <div class="call-grid">
         <a class="call-card primary" href="tel:112"><span>112</span><strong data-en="Emergency response" data-hi="आपात सहायता">Emergency response</strong><small data-en="Call now" data-hi="अभी कॉल करें">Call now</small></a>
@@ -81,10 +84,10 @@
       <button class="back-button" type="button" data-close-panel data-en="Back to choices" data-hi="विकल्पों पर वापस">Back to choices</button>
     </section>
 
-    <section class="help-panel custody-panel" id="panel-custody" hidden tabindex="-1">
+    <section class="help-panel custody-panel" id="panel-custody" hidden tabindex="-1" aria-labelledby="custody-title">
       <div class="panel-heading">
         <p class="kicker" data-en="Detained or missing" data-hi="हिरासत या लापता">Detained or missing</p>
-        <h2 data-en="First decide: suspected police custody, or genuinely missing?" data-hi="पहले तय करें: पुलिस हिरासत की आशंका है, या व्यक्ति सच में लापता है?">First decide: suspected police custody, or genuinely missing?</h2>
+        <h2 id="custody-title" data-en="First decide: suspected police custody, or genuinely missing?" data-hi="पहले तय करें: पुलिस हिरासत की आशंका है, या व्यक्ति सच में लापता है?">First decide: suspected police custody, or genuinely missing?</h2>
       </div>
       <div class="decision-grid">
         <article>
@@ -115,10 +118,10 @@
       <button class="back-button" type="button" data-close-panel data-en="Back to choices" data-hi="विकल्पों पर वापस">Back to choices</button>
     </section>
 
-    <section class="help-panel lawyer-panel" id="panel-lawyer" hidden tabindex="-1">
+    <section class="help-panel lawyer-panel" id="panel-lawyer" hidden tabindex="-1" aria-labelledby="lawyer-title">
       <div class="panel-heading">
         <p class="kicker" data-en="Human help first" data-hi="पहले मानवीय सहायता">Human help first</p>
-        <h2 data-en="Call a legal-aid helpline. Say the urgent fact in one sentence." data-hi="कानूनी सहायता हेल्पलाइन को कॉल करें। तत्काल तथ्य एक वाक्य में कहें।">Call a legal-aid helpline. Say the urgent fact in one sentence.</h2>
+        <h2 id="lawyer-title" data-en="Call a legal-aid helpline. Say the urgent fact in one sentence." data-hi="कानूनी सहायता हेल्पलाइन को कॉल करें। तत्काल तथ्य एक वाक्य में कहें।">Call a legal-aid helpline. Say the urgent fact in one sentence.</h2>
       </div>
       <div class="call-grid three">
         <a class="call-card primary" href="tel:15100"><span>15100</span><strong data-en="National legal aid" data-hi="राष्ट्रीय कानूनी सहायता">National legal aid</strong></a>
@@ -136,13 +139,14 @@
       <button class="back-button" type="button" data-close-panel data-en="Back to choices" data-hi="विकल्पों पर वापस">Back to choices</button>
     </section>
 
-    <section class="help-panel record-panel" id="panel-record" hidden tabindex="-1">
+    <section class="help-panel record-panel" id="panel-record" hidden tabindex="-1" aria-labelledby="record-title">
       <div class="panel-heading">
         <p class="kicker" data-en="One accurate record" data-hi="एक सही रिकॉर्ड">One accurate record</p>
-        <h2 data-en="Record facts once. Share them privately with a lawyer or authority." data-hi="तथ्य एक बार दर्ज करें। वकील या प्राधिकरण से निजी रूप से साझा करें।">Record facts once. Share them privately with a lawyer or authority.</h2>
+        <h2 id="record-title" data-en="Record facts once. Share them privately with a lawyer or authority." data-hi="तथ्य एक बार दर्ज करें। वकील या प्राधिकरण से निजी रूप से साझा करें।">Record facts once. Share them privately with a lawyer or authority.</h2>
         <p data-en="Nothing typed here is uploaded or saved by this site." data-hi="यहाँ लिखी कोई जानकारी इस साइट द्वारा अपलोड या सहेजी नहीं जाती।">Nothing typed here is uploaded or saved by this site.</p>
       </div>
-      <form id="incidentForm">
+      <p class="form-note" id="incidentFormNote" data-en="Fields marked * are required. Use a private device when possible." data-hi="* से चिन्हित फ़ील्ड आवश्यक हैं। संभव हो तो निजी उपकरण का उपयोग करें।">Fields marked * are required. Use a private device when possible.</p>
+      <form id="incidentForm" aria-describedby="incidentFormNote">
         <label><span data-en="Your connection" data-hi="आपका संबंध">Your connection</span>
           <select name="role" required>
             <option value="">Select / चुनें</option>
@@ -168,11 +172,12 @@
           </select>
         </label>
         <label><span data-en="Evidence available (optional)" data-hi="उपलब्ध साक्ष्य (वैकल्पिक)">Evidence available (optional)</span><input name="evidence" autocomplete="off"></label>
-        <label class="full"><span data-en="Safe contact (optional)" data-hi="सुरक्षित संपर्क (वैकल्पिक)">Safe contact (optional)</span><input name="contact" autocomplete="off"><small data-en="Do not use a public number if that could create risk." data-hi="यदि जोखिम हो तो सार्वजनिक नंबर न दें।">Do not use a public number if that could create risk.</small></label>
+        <label class="full"><span data-en="Safe contact (optional)" data-hi="सुरक्षित संपर्क (वैकल्पिक)">Safe contact (optional)</span><input name="contact" type="tel" inputmode="tel" autocomplete="tel"><small data-en="Do not use a public number if that could create risk." data-hi="यदि जोखिम हो तो सार्वजनिक नंबर न दें।">Do not use a public number if that could create risk.</small></label>
         <label class="confirm full"><input name="truth" type="checkbox" required><span data-en="I will review this note and remove anything I cannot support." data-hi="मैं इस नोट की जाँच कर असमर्थित बात हटाऊँगा/हटाऊँगी।">I will review this note and remove anything I cannot support.</span></label>
         <button class="generate-button full" type="submit" data-en="Create incident note" data-hi="घटना नोट बनाएँ">Create incident note</button>
       </form>
       <div class="incident-output" id="incidentOutput" hidden>
+        <p class="success-message" role="status" tabindex="-1" data-en="Incident note created on this device. Review it before sharing." data-hi="घटना नोट इस उपकरण पर बन गया। साझा करने से पहले जाँचें।">Incident note created on this device. Review it before sharing.</p>
         <label for="incidentText" data-en="Review before sharing" data-hi="साझा करने से पहले जाँचें">Review before sharing</label>
         <textarea id="incidentText" rows="15"></textarea>
         <div class="output-actions">
@@ -187,56 +192,60 @@
       <p class="kicker" data-en="After immediate needs are handled" data-hi="तत्काल जरूरतों के बाद">After immediate needs are handled</p>
       <h2 data-en="Send the record to the right place." data-hi="रिकॉर्ड सही जगह भेजें।">Send the record to the right place.</h2>
       <div class="report-list">
-        <article>
-          <strong data-en="Serious Delhi Police misconduct" data-hi="दिल्ली पुलिस का गंभीर दुराचार">Serious Delhi Police misconduct</strong>
-          <p data-en="For death or grievous hurt in custody, rape or attempted rape in custody, arrest or detention without due process, extortion, land or house grabbing, or serious abuse of authority. Complaints by a victim or representative should be signed and supported by a sworn affidavit; anonymous complaints are excluded. PCA may not entertain a matter already before a court, NHRC or another statutory body." data-hi="हिरासत में मृत्यु या गंभीर चोट, हिरासत में बलात्कार या प्रयास, विधिसम्मत प्रक्रिया के बिना गिरफ्तारी या हिरासत, जबरन वसूली, जमीन या मकान कब्ज़ा, या अधिकार के गंभीर दुरुपयोग के लिए। पीड़ित या प्रतिनिधि की शिकायत हस्ताक्षरित और शपथपत्र सहित होनी चाहिए; गुमनाम शिकायतें बाहर हैं। अदालत, NHRC या अन्य वैधानिक निकाय में लंबित मामला PCA स्वीकार न करे।">For death or grievous hurt in custody, rape or attempted rape in custody, arrest or detention without due process, extortion, land or house grabbing, or serious abuse of authority. Complaints by a victim or representative should be signed and supported by a sworn affidavit; anonymous complaints are excluded. PCA may not entertain a matter already before a court, NHRC or another statutory body.</p>
-          <p class="small-note" data-en="Email is only an intake method—not proof of registration. Ask for acknowledgment and call to confirm. Postal: Police Complaints Authority, 10th Floor, Chanderlok Building, Janpath, New Delhi 110001." data-hi="ईमेल केवल शिकायत भेजने का माध्यम है—पंजीकरण का प्रमाण नहीं। पावती माँगें और फोन से पुष्टि करें। डाक: Police Complaints Authority, 10th Floor, Chanderlok Building, Janpath, New Delhi 110001।">Email is only an intake method—not proof of registration. Ask for acknowledgment and call to confirm. Postal: Police Complaints Authority, 10th Floor, Chanderlok Building, Janpath, New Delhi 110001.</p>
-          <a href="https://pca.delhi.gov.in/pca/contact-us" target="_blank" rel="noopener" data-en="Official PCA contact page" data-hi="आधिकारिक PCA संपर्क पेज">Official PCA contact page</a> · <a href="mailto:pca.delhi@delhi.gov.in">pca.delhi@delhi.gov.in</a> · <a href="tel:+911121400977">011-21400977</a>
-        </article>
-        <article>
-          <strong data-en="Human-rights complaint involving a public servant" data-hi="लोक सेवक से जुड़ी मानवाधिकार शिकायत">Human-rights complaint involving a public servant</strong>
-          <p data-en="For a violation or abetment by a public servant, or public-servant negligence in preventing one. NHRC is not emergency dispatch. It ordinarily screens out matters older than one year, sub judice, vague or anonymous complaints and service matters. Its actions are principally inquiries, recommendations, interim-relief recommendations or court approaches—not guaranteed compensation or prosecution." data-hi="लोक सेवक द्वारा उल्लंघन या उसका दुष्प्रेरण, या उल्लंघन रोकने में लोक सेवक की लापरवाही के लिए। NHRC आपात सेवा नहीं है। यह सामान्यतः एक वर्ष से पुराने, अदालत में लंबित, अस्पष्ट या गुमनाम तथा सेवा मामलों को नहीं लेता। इसकी कार्रवाई मुख्यतः जाँच, सिफारिश, अंतरिम राहत की सिफारिश या अदालत का रुख है—मुआवज़ा या अभियोजन की गारंटी नहीं।">For a violation or abetment by a public servant, or public-servant negligence in preventing one. NHRC is not emergency dispatch. It ordinarily screens out matters older than one year, sub judice, vague or anonymous complaints and service matters. Its actions are principally inquiries, recommendations, interim-relief recommendations or court approaches—not guaranteed compensation or prosecution.</p>
-          <a href="https://www.hrcnet.nic.in/HRCNet/public/webcomplaint.aspx" target="_blank" rel="noopener" data-en="Open NHRC complaint portal" data-hi="NHRC शिकायत पोर्टल खोलें">Open NHRC complaint portal</a> · <a href="tel:14433">14433</a>
-        </article>
-        <article>
-          <strong data-en="Court action or release from unlawful custody" data-hi="अदालती कार्रवाई या अवैध हिरासत से रिहाई">Court action or release from unlawful custody</strong>
-          <p data-en="Speak to a lawyer or legal-services authority. An email to a court does not file a case or automatically invoke Article 32." data-hi="वकील या कानूनी सेवा प्राधिकरण से बात करें। अदालत को ईमेल करने से मामला दाखिल नहीं होता या अनुच्छेद 32 स्वतः लागू नहीं होता।">Speak to a lawyer or legal-services authority. An email to a court does not file a case or automatically invoke Article 32.</p>
-          <a href="tel:15100" data-en="Call legal aid: 15100" data-hi="कानूनी सहायता: 15100">Call legal aid: 15100</a>
-        </article>
+        <details class="report-item">
+          <summary data-en="Serious Delhi Police misconduct" data-hi="दिल्ली पुलिस का गंभीर दुराचार">Serious Delhi Police misconduct</summary>
+          <div class="report-content">
+            <p data-en="For death or grievous hurt in custody, rape or attempted rape in custody, arrest or detention without due process, extortion, land or house grabbing, or serious abuse of authority. Complaints by a victim or representative should be signed and supported by a sworn affidavit; anonymous complaints are excluded. PCA may not entertain a matter already before a court, NHRC or another statutory body." data-hi="हिरासत में मृत्यु या गंभीर चोट, हिरासत में बलात्कार या प्रयास, विधिसम्मत प्रक्रिया के बिना गिरफ्तारी या हिरासत, जबरन वसूली, जमीन या मकान कब्ज़ा, या अधिकार के गंभीर दुरुपयोग के लिए। पीड़ित या प्रतिनिधि की शिकायत हस्ताक्षरित और शपथपत्र सहित होनी चाहिए; गुमनाम शिकायतें बाहर हैं। अदालत, NHRC या अन्य वैधानिक निकाय में लंबित मामला PCA स्वीकार न करे।">For death or grievous hurt in custody, rape or attempted rape in custody, arrest or detention without due process, extortion, land or house grabbing, or serious abuse of authority. Complaints by a victim or representative should be signed and supported by a sworn affidavit; anonymous complaints are excluded. PCA may not entertain a matter already before a court, NHRC or another statutory body.</p>
+            <p class="small-note" data-en="Email is only an intake method—not proof of registration. Ask for acknowledgment and call to confirm. Postal: Police Complaints Authority, 10th Floor, Chanderlok Building, Janpath, New Delhi 110001." data-hi="ईमेल केवल शिकायत भेजने का माध्यम है—पंजीकरण का प्रमाण नहीं। पावती माँगें और फोन से पुष्टि करें। डाक: Police Complaints Authority, 10th Floor, Chanderlok Building, Janpath, New Delhi 110001।">Email is only an intake method—not proof of registration. Ask for acknowledgment and call to confirm. Postal: Police Complaints Authority, 10th Floor, Chanderlok Building, Janpath, New Delhi 110001.</p>
+            <div class="resource-links"><a href="https://pca.delhi.gov.in/pca/contact-us" target="_blank" rel="noopener" data-en="Official PCA contact page" data-hi="आधिकारिक PCA संपर्क पेज">Official PCA contact page</a><a href="mailto:pca.delhi@delhi.gov.in">pca.delhi@delhi.gov.in</a><a href="tel:+911121400977">011-21400977</a></div>
+          </div>
+        </details>
+        <details class="report-item">
+          <summary data-en="Human-rights complaint involving a public servant" data-hi="लोक सेवक से जुड़ी मानवाधिकार शिकायत">Human-rights complaint involving a public servant</summary>
+          <div class="report-content">
+            <p data-en="For a violation or abetment by a public servant, or public-servant negligence in preventing one. NHRC is not emergency dispatch. It ordinarily screens out matters older than one year, sub judice, vague or anonymous complaints and service matters. Its actions are principally inquiries, recommendations, interim-relief recommendations or court approaches—not guaranteed compensation or prosecution." data-hi="लोक सेवक द्वारा उल्लंघन या उसका दुष्प्रेरण, या उल्लंघन रोकने में लोक सेवक की लापरवाही के लिए। NHRC आपात सेवा नहीं है। यह सामान्यतः एक वर्ष से पुराने, अदालत में लंबित, अस्पष्ट या गुमनाम तथा सेवा मामलों को नहीं लेता। इसकी कार्रवाई मुख्यतः जाँच, सिफारिश, अंतरिम राहत की सिफारिश या अदालत का रुख है—मुआवज़ा या अभियोजन की गारंटी नहीं।">For a violation or abetment by a public servant, or public-servant negligence in preventing one. NHRC is not emergency dispatch. It ordinarily screens out matters older than one year, sub judice, vague or anonymous complaints and service matters. Its actions are principally inquiries, recommendations, interim-relief recommendations or court approaches—not guaranteed compensation or prosecution.</p>
+            <div class="resource-links"><a href="https://www.hrcnet.nic.in/HRCNet/public/webcomplaint.aspx" target="_blank" rel="noopener" data-en="Open NHRC complaint portal" data-hi="NHRC शिकायत पोर्टल खोलें">Open NHRC complaint portal</a><a href="tel:14433">14433</a></div>
+          </div>
+        </details>
+        <details class="report-item">
+          <summary data-en="Court action or release from unlawful custody" data-hi="अदालती कार्रवाई या अवैध हिरासत से रिहाई">Court action or release from unlawful custody</summary>
+          <div class="report-content">
+            <p data-en="Speak to a lawyer or legal-services authority. An email to a court does not file a case or automatically invoke Article 32." data-hi="वकील या कानूनी सेवा प्राधिकरण से बात करें। अदालत को ईमेल करने से मामला दाखिल नहीं होता या अनुच्छेद 32 स्वतः लागू नहीं होता।">Speak to a lawyer or legal-services authority. An email to a court does not file a case or automatically invoke Article 32.</p>
+            <div class="resource-links"><a href="tel:15100" data-en="Call legal aid: 15100" data-hi="कानूनी सहायता: 15100">Call legal aid: 15100</a></div>
+          </div>
+        </details>
       </div>
     </section>
 
     <section class="offline" id="offline">
       <p class="kicker" data-en="Prepare for weak or no internet" data-hi="कमज़ोर या बंद इंटरनेट की तैयारी">Prepare for weak or no internet</p>
       <h2 data-en="Save the essentials before you need them." data-hi="जरूरत से पहले आवश्यक जानकारी सहेजें।">Save the essentials before you need them.</h2>
-      <ol class="steps compact">
-        <li data-en="Open this site once while connected; supported browsers will keep the essential page for offline use." data-hi="इंटरनेट रहते साइट एक बार खोलें; समर्थित ब्राउज़र आवश्यक पेज ऑफ़लाइन रखेंगे।">Open this site once while connected; supported browsers will keep the essential page for offline use.</li>
-        <li data-en="Download or screenshot the emergency card and keep the numbers on paper." data-hi="आपात कार्ड डाउनलोड या स्क्रीनशॉट करें और नंबर कागज़ पर रखें।">Download or screenshot the emergency card and keep the numbers on paper.</li>
-        <li data-en="Agree on a meeting point, check-in time and one trusted contact before entering a crowd." data-hi="भीड़ में जाने से पहले मिलने की जगह, संपर्क समय और एक भरोसेमंद व्यक्ति तय करें।">Agree on a meeting point, check-in time and one trusted contact before entering a crowd.</li>
-        <li data-en="This site cannot send a message or call when connectivity is unavailable." data-hi="कनेक्टिविटी न होने पर यह साइट संदेश या कॉल नहीं भेज सकती।">This site cannot send a message or call when connectivity is unavailable.</li>
-      </ol>
       <div class="offline-actions">
         <a class="copy-button" href="downloads/emergency-card.txt" download data-en="Download emergency card" data-hi="आपात कार्ड डाउनलोड करें">Download emergency card</a>
         <button class="secondary-button" id="printCard" type="button" data-en="Print this page" data-hi="यह पेज प्रिंट करें">Print this page</button>
       </div>
+      <details class="offline-details">
+        <summary data-en="How offline use works" data-hi="ऑफ़लाइन उपयोग कैसे काम करता है">How offline use works</summary>
+        <ol class="steps compact">
+          <li data-en="Open this site once while connected; supported browsers will keep the essential page for offline use." data-hi="इंटरनेट रहते साइट एक बार खोलें; समर्थित ब्राउज़र आवश्यक पेज ऑफ़लाइन रखेंगे।">Open this site once while connected; supported browsers will keep the essential page for offline use.</li>
+          <li data-en="Download or screenshot the emergency card and keep the numbers on paper." data-hi="आपात कार्ड डाउनलोड या स्क्रीनशॉट करें और नंबर कागज़ पर रखें।">Download or screenshot the emergency card and keep the numbers on paper.</li>
+          <li data-en="Agree on a meeting point, check-in time and one trusted contact before entering a crowd." data-hi="भीड़ में जाने से पहले मिलने की जगह, संपर्क समय और एक भरोसेमंद व्यक्ति तय करें।">Agree on a meeting point, check-in time and one trusted contact before entering a crowd.</li>
+          <li data-en="This site cannot send a message or call when connectivity is unavailable." data-hi="कनेक्टिविटी न होने पर यह साइट संदेश या कॉल नहीं भेज सकती।">This site cannot send a message or call when connectivity is unavailable.</li>
+        </ol>
+      </details>
     </section>
 
     <details class="other-actions">
       <summary data-en="Not an urgent protest matter?" data-hi="तत्काल प्रदर्शन मामला नहीं है?">Not an urgent protest matter?</summary>
-      <p><a href="https://neet.nta.nic.in/nta-helpdesk/" target="_blank" rel="noopener">NEET (UG) official helpdesk</a> · <a href="https://rtionline.gov.in/" target="_blank" rel="noopener">Central RTI Online</a> · <a href="https://pgportal.gov.in/" target="_blank" rel="noopener">CPGRAMS</a></p>
+      <p><a href="https://neet.nta.nic.in/nta-helpdesk/" target="_blank" rel="noopener">NEET (UG) official helpdesk</a><a href="https://rtionline.gov.in/" target="_blank" rel="noopener">Central RTI Online</a><a href="https://pgportal.gov.in/" target="_blank" rel="noopener">CPGRAMS</a></p>
     </details>
   </main>
 
   <footer>
     <strong>Jan Adhikar / जन अधिकार</strong>
     <p data-en="Independent, nonpartisan public legal information. Not a law firm, emergency service or evidence repository. Contacts verified 22 July 2026." data-hi="स्वतंत्र, गैर-दलीय सार्वजनिक कानूनी जानकारी। यह लॉ फर्म, आपात सेवा या साक्ष्य भंडार नहीं है। संपर्क 22 जुलाई 2026 को सत्यापित।">Independent, nonpartisan public legal information. Not a law firm, emergency service or evidence repository. Contacts verified 22 July 2026.</p>
-    <div><button class="footer-share" id="shareButton" type="button" data-en="Share this site" data-hi="यह साइट साझा करें">Share this site</button> · <a href="privacy.html" data-en="Privacy" data-hi="गोपनीयता">Privacy</a> · <a href="#report" data-en="Official routes" data-hi="आधिकारिक मार्ग">Official routes</a> · <small>By <a href="mailto:iamdseth@gmail.com">Deepanker Seth</a></small></div>
+    <div><button class="footer-share" id="shareButton" type="button" data-en="Share this site" data-hi="यह साइट साझा करें">Share this site</button><a href="privacy.html" data-en="Privacy" data-hi="गोपनीयता">Privacy</a><a href="#report" data-en="Official routes" data-hi="आधिकारिक मार्ग">Official routes</a><small>By <a href="mailto:iamdseth@gmail.com">Deepanker Seth</a></small></div>
   </footer>
-
-  <nav class="urgent-bar" aria-label="Urgent actions">
-    <a href="tel:112"><span data-en="Emergency" data-hi="आपातकाल">Emergency</span><strong>112</strong></a>
-    <a href="tel:15100"><span data-en="Legal aid" data-hi="कानूनी सहायता">Legal aid</span><strong>15100</strong></a>
-  </nav>
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
   <script src="app.js" defer></script>
