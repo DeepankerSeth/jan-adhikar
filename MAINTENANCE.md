@@ -1,4 +1,4 @@
-# Jan Adhikar maintenance plan
+# Adhikar Sathi maintenance plan
 
 Last full verification: **22 July 2026** (all contacts checked against official sources via search index; no number was dial-tested). Canonical record: `site/data/resources.json`.
 

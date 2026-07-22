@@ -1,8 +1,8 @@
-# Jan Adhikar / जन अधिकार
+# Adhikar Sathi / अधिकार साथी
 
-Jan Adhikar is a fast, nonpartisan protest-support and legal-information resource for people in India.
+Adhikar Sathi (formerly published as Jan Adhikar) is a fast, nonpartisan protest-support and legal-information resource for people in India.
 
-Live site: https://deepankerseth.github.io/jan-adhikar/
+Live site: https://adhikarsathi.com (also served at https://deepankerseth.github.io/jan-adhikar/)
 
 The site is deliberately narrow. It helps a person answer one question: **What do I need in the next five minutes?**
 
@@ -14,7 +14,7 @@ The site is deliberately narrow. It helps a person answer one question: **What d
 
 ## Privacy and safety
 
-There are no accounts, client-side analytics, server forms, evidence uploads or case databases. Form content is processed in the browser and is not sent to Jan Adhikar. GitHub Pages and network providers may process standard request logs under their own policies.
+There are no accounts, client-side analytics, server forms, evidence uploads or case databases. Form content is processed in the browser and is not sent to Adhikar Sathi. GitHub Pages and network providers may process standard request logs under their own policies.
 
 The site is not a law firm, emergency service, staffed helpline, court-filing service or evidence repository. It does not promise that help will be dispatched. Immediate danger should never wait for an email or form.
 
@@ -28,6 +28,6 @@ National emergency and legal-aid routes work everywhere in India. City-specific 
 
 ## Independence
 
-Jan Adhikar is an independent public-interest project. It is not connected to Libration, any company, political party, government, law firm or legal practice.
+Adhikar Sathi is an independent public-interest project. It is not connected to Libration, any company, political party, government, law firm or legal practice.
 
 Contact and legal-routing information was last checked against official Indian sources on 22 July 2026 (see `site/data/resources.json` for per-contact verification dates and `MAINTENANCE.md` for the re-verification plan).

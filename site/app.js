@@ -165,7 +165,7 @@ function incidentNote(data) {
   const created = new Date().toLocaleString(currentLanguage() === 'hi' ? 'hi-IN' : 'en-IN');
 
   if (currentLanguage() === 'hi') {
-    return `JAN ADHIKAR — घटना नोट
+    return `ADHIKAR SATHI — घटना नोट
 ================================
 बनाया गया: ${created}
 
@@ -202,7 +202,7 @@ ${data.get('contact') || 'नहीं दिया गया'}
 यह नोट अदालत में दाखिला, शिकायत नंबर या सहायता भेजे जाने की गारंटी नहीं है। तत्काल खतरे में 112 और कानूनी सहायता 15100 पर कॉल करें।`;
   }
 
-  return `JAN ADHIKAR — INCIDENT NOTE
+  return `ADHIKAR SATHI — INCIDENT NOTE
 ============================
 Created: ${created}
 
@@ -257,7 +257,7 @@ function downloadIncident() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = `jan-adhikar-incident-${new Date().toISOString().slice(0, 10)}.txt`;
+  link.download = `adhikar-sathi-incident-${new Date().toISOString().slice(0, 10)}.txt`;
   link.click();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   showToast(text('Incident note downloaded to this device.', 'घटना नोट इस उपकरण पर डाउनलोड हो गया।'));
@@ -265,7 +265,7 @@ function downloadIncident() {
 
 async function shareSite() {
   const shareData = {
-    title: 'Jan Adhikar',
+    title: 'Adhikar Sathi',
     text: text('Fast protest safety, detention and legal-aid help.', 'प्रदर्शन के दौरान तेज़ सुरक्षा, हिरासत और कानूनी सहायता।'),
     url: location.href.split('#')[0]
   };
