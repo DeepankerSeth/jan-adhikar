@@ -2,7 +2,7 @@
 
 Adhikar Sathi (formerly published as Jan Adhikar) is a fast, nonpartisan protest-support and legal-information resource for people in India.
 
-Live site: https://adhikarsathi.com (also served at https://deepankerseth.github.io/jan-adhikar/)
+Live site: https://adhikarsathi.com (also at https://deepankerseth.github.io/Adhikar-Sathi/, which redirects to the main domain)
 
 The site is deliberately narrow. It helps a person answer one question: **What do I need in the next five minutes?**
 
