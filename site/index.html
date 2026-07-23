@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#103a32">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#faf7f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
   <meta name="description" content="Fast protest safety, detention, legal-aid and evidence help for people in India.">
   <meta property="og:title" content="Adhikar Sathi — Help when it matters">
   <meta property="og:description" content="Emergency help, detention support, legal aid and a safe incident record—without an account or data upload.">
   <title>Adhikar Sathi — Protest help when it matters</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23103a32'/><text x='32' y='44' text-anchor='middle' font-size='40' fill='white'>A</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='13' fill='%23f2b90d'/><rect x='3' y='3' width='58' height='58' rx='10' fill='none' stroke='%23171511' stroke-width='3'/><text x='32' y='46' text-anchor='middle' font-size='38' font-weight='bold' fill='%23171511'>अ</text></svg>">
   <link rel="canonical" href="https://adhikarsathi.com/">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,8 +19,11 @@
 
   <header class="topbar">
     <a class="brand" href="#main" aria-label="Adhikar Sathi home">
-      <strong>Adhikar Sathi</strong>
-      <span>अधिकार साथी</span>
+      <span class="brand-mark" aria-hidden="true">अ</span>
+      <span class="brand-text">
+        <strong>Adhikar Sathi</strong>
+        <span lang="hi">अधिकार साथी</span>
+      </span>
     </a>
     <div class="top-actions">
       <span class="network" id="networkStatus" role="status">Online</span>
@@ -39,7 +44,7 @@
     <section class="hero">
       <p class="kicker" data-en="Fast help during a protest" data-hi="प्रदर्शन के दौरान तेज़ सहायता">Fast help during a protest</p>
       <h1 data-en="What do you need in the next five minutes?" data-hi="अगले पाँच मिनट में आपको क्या चाहिए?">What do you need in the next five minutes?</h1>
-      <p class="intro" data-en="Choose one for the next useful action." data-hi="अगली उपयोगी कार्रवाई के लिए एक विकल्प चुनें।">Choose one for the next useful action.</p>
+      <p class="intro" lang="hi" data-en="अगले पाँच मिनट में आपको क्या चाहिए?" data-hi="What do you need in the next five minutes?">अगले पाँच मिनट में आपको क्या चाहिए?</p>
       <div class="city-select" role="group" aria-labelledby="cityLabel">
         <span class="city-label" id="cityLabel" data-en="Your city:" data-hi="आपका शहर:">Your city:</span>
         <button class="city-chip" type="button" data-city="delhi" aria-pressed="false" data-en="Delhi" data-hi="दिल्ली">Delhi</button>
@@ -54,22 +59,22 @@
       <button class="route danger" type="button" data-route="danger" aria-controls="panel-danger" aria-expanded="false">
         <span class="route-number">1</span>
         <span><strong data-en="Someone is hurt or in danger" data-hi="कोई घायल है या खतरे में है">Someone is hurt or in danger</strong><small data-en="Emergency, medical care, safety" data-hi="आपातकाल, चिकित्सा, सुरक्षा">Emergency, medical care, safety</small></span>
-        <span class="route-arrow" aria-hidden="true">›</span>
+        <span class="route-arrow" aria-hidden="true">→</span>
       </button>
-      <button class="route custody" type="button" data-route="custody" aria-controls="panel-custody" aria-expanded="false">
+      <button class="route" type="button" data-route="custody" aria-controls="panel-custody" aria-expanded="false">
         <span class="route-number">2</span>
         <span><strong data-en="Someone is detained or missing" data-hi="कोई हिरासत में है या लापता है">Someone is detained or missing</strong><small data-en="Choose the correct route before calling" data-hi="कॉल से पहले सही रास्ता चुनें">Choose the correct route before calling</small></span>
-        <span class="route-arrow" aria-hidden="true">›</span>
+        <span class="route-arrow" aria-hidden="true">→</span>
       </button>
-      <button class="route lawyer" type="button" data-route="lawyer" aria-controls="panel-lawyer" aria-expanded="false">
+      <button class="route" type="button" data-route="lawyer" aria-controls="panel-lawyer" aria-expanded="false">
         <span class="route-number">3</span>
         <span><strong data-en="I need legal help now" data-hi="मुझे अभी कानूनी सहायता चाहिए">I need legal help now</strong><small data-en="Legal-aid helplines and what to say" data-hi="कानूनी सहायता हेल्पलाइन और क्या कहना है">Legal-aid helplines and what to say</small></span>
-        <span class="route-arrow" aria-hidden="true">›</span>
+        <span class="route-arrow" aria-hidden="true">→</span>
       </button>
-      <button class="route record" type="button" data-route="record" aria-controls="panel-record" aria-expanded="false">
+      <button class="route" type="button" data-route="record" aria-controls="panel-record" aria-expanded="false">
         <span class="route-number">4</span>
         <span><strong data-en="I need to record what happened" data-hi="जो हुआ उसे दर्ज करना है">I need to record what happened</strong><small data-en="Create one accurate incident note on this device" data-hi="इस उपकरण पर एक सही घटना नोट बनाएँ">Create one accurate incident note on this device</small></span>
-        <span class="route-arrow" aria-hidden="true">›</span>
+        <span class="route-arrow" aria-hidden="true">→</span>
       </button>
     </section>
 
@@ -292,7 +297,7 @@
       <h2 data-en="Save the essentials before you need them." data-hi="जरूरत से पहले आवश्यक जानकारी सहेजें।">Save the essentials before you need them.</h2>
       <div class="offline-actions">
         <a class="copy-button" href="downloads/emergency-card.txt" download data-en="Download emergency card" data-hi="आपात कार्ड डाउनलोड करें">Download emergency card</a>
-        <button class="secondary-button" id="printCard" type="button" data-en="Print this page" data-hi="यह पेज प्रिंट करें">Print this page</button>
+        <button class="secondary-button" id="printPage" type="button" data-en="Print this page" data-hi="यह पेज प्रिंट करें">Print this page</button>
       </div>
       <details class="offline-details">
         <summary data-en="If mobile internet is shut down" data-hi="अगर मोबाइल इंटरनेट बंद हो">If mobile internet is shut down</summary>
@@ -328,7 +333,7 @@
       <summary data-en="Not an urgent protest matter?" data-hi="तत्काल प्रदर्शन मामला नहीं है?">Not an urgent protest matter?</summary>
       <p><a href="https://neet.nta.nic.in/nta-helpdesk/" target="_blank" rel="noopener">NEET (UG) official helpdesk</a><a href="https://rtionline.gov.in/" target="_blank" rel="noopener">Central RTI Online</a><a href="https://pgportal.gov.in/" target="_blank" rel="noopener">CPGRAMS</a></p>
     </details>
-    <section class="print-card" id="printCard" aria-hidden="true">
+    <section class="print-card" aria-hidden="true">
       <h2>Adhikar Sathi — Emergency card / आपात कार्ड</h2>
       <p><strong>Verified 22 July 2026. Numbers change. If any number fails: 112 (danger) · 15100 (legal aid).</strong><br>सत्यापित: 22 जुलाई 2026। नंबर बदल सकते हैं। कोई नंबर न चले तो: 112 (खतरा) · 15100 (कानूनी सहायता)।</p>
       <p><strong>National / राष्ट्रीय:</strong> 112 — police, fire, ambulance; a voice call needs no internet or balance / पुलिस-अग्निशमन-एम्बुलेंस; कॉल को इंटरनेट या बैलेंस नहीं चाहिए। · 15100 — legal aid; anyone in custody and every woman qualifies regardless of income / कानूनी सहायता; हिरासत में कोई भी और हर महिला, आय चाहे जो हो, पात्र। · 14416 — Tele-MANAS mental health, 24×7 / मानसिक स्वास्थ्य। · Women / महिला: 1091, 181 · Children / बच्चे: 1098 · No answer? 112 / उत्तर नहीं? 112। · NHRC: 14433</p>

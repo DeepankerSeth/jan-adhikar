@@ -96,6 +96,8 @@ function translatePage() {
     element.textContent = currentLanguage() === 'hi' ? element.dataset.hi : element.dataset.en;
   });
   document.documentElement.lang = currentLanguage() === 'hi' ? 'hi' : 'en';
+  const intro = $('.intro');
+  if (intro) intro.lang = currentLanguage() === 'hi' ? 'en' : 'hi';
   $('#languageToggle').textContent = currentLanguage() === 'hi' ? 'English' : 'हिन्दी';
   $('#languageToggle').setAttribute('aria-label', text('Switch to Hindi', 'अंग्रेज़ी में बदलें'));
   $('#headerEmergency').setAttribute('aria-label', text('Call emergency number 112', 'आपात नंबर 112 पर कॉल करें'));
@@ -109,12 +111,12 @@ function switchLanguage() {
 }
 
 function openRoute(name, trigger) {
-  lastRouteButton = trigger || $(`[data-route="${name}"]`);
+  lastRouteButton = trigger;
   $$('.help-panel').forEach(panel => { panel.hidden = true; });
   $$('.route').forEach(button => button.setAttribute('aria-expanded', 'false'));
   const panel = $(`#panel-${name}`);
   if (!panel) return;
-  lastRouteButton?.setAttribute('aria-expanded', 'true');
+  trigger.setAttribute('aria-expanded', 'true');
   panel.hidden = false;
   panel.focus({ preventScroll: true });
   panel.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
@@ -123,9 +125,8 @@ function openRoute(name, trigger) {
 function closePanels() {
   $$('.help-panel').forEach(panel => { panel.hidden = true; });
   $$('.route').forEach(button => button.setAttribute('aria-expanded', 'false'));
-  const target = lastRouteButton || $('.routes');
-  target.focus?.({ preventScroll: true });
-  target.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
+  lastRouteButton.focus({ preventScroll: true });
+  lastRouteButton.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
 }
 
 async function copyText(value, message) {
@@ -146,16 +147,16 @@ async function copyText(value, message) {
 }
 
 function copyTemplate(key) {
-  const template = templates[key]?.[currentLanguage()];
-  if (template) copyText(template, text('Message copied. Fill every bracket before sending.', 'संदेश कॉपी हो गया। भेजने से पहले हर कोष्ठक भरें।'));
+  copyText(templates[key][currentLanguage()], text('Message copied. Fill every bracket before sending.', 'संदेश कॉपी हो गया। भेजने से पहले हर कोष्ठक भरें।'));
 }
 
 function incidentNote(data) {
-  const role = roleLabels[data.get('role')]?.[currentLanguage() === 'hi' ? 1 : 0] || '';
-  const need = needLabels[data.get('need')]?.[currentLanguage() === 'hi' ? 1 : 0] || '';
-  const created = new Date().toLocaleString(currentLanguage() === 'hi' ? 'hi-IN' : 'en-IN');
+  const hi = currentLanguage() === 'hi';
+  const role = roleLabels[data.get('role')][hi ? 1 : 0];
+  const need = needLabels[data.get('need')][hi ? 1 : 0];
+  const created = new Date().toLocaleString(hi ? 'hi-IN' : 'en-IN');
 
-  if (currentLanguage() === 'hi') {
+  if (hi) {
     return `ADHIKAR SATHI — घटना नोट
 ================================
 बनाया गया: ${created}
@@ -282,7 +283,7 @@ function handleInvalid(event) {
 }
 
 function clearInvalid(event) {
-  event.target.removeAttribute?.('aria-invalid');
+  event.target.removeAttribute('aria-invalid');
 }
 
 function showToast(message) {
@@ -307,7 +308,7 @@ function init() {
   $('#incidentForm').addEventListener('input', clearInvalid);
   $('#copyIncident').addEventListener('click', () => copyText($('#incidentText').value, text('Incident note copied. Review it before sharing.', 'घटना नोट कॉपी हो गया। साझा करने से पहले जाँचें।')));
   $('#downloadIncident').addEventListener('click', downloadIncident);
-  $('#printCard').addEventListener('click', () => window.print());
+  $('#printPage').addEventListener('click', () => window.print());
   $('#shareButton')?.addEventListener('click', shareSite);
   window.addEventListener('online', updateNetworkStatus);
   window.addEventListener('offline', updateNetworkStatus);
@@ -317,6 +318,7 @@ function init() {
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
     navigator.serviceWorker.register('./service-worker.js').catch(() => {});
   }
+  requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('ready')));
 }
 
 document.addEventListener('DOMContentLoaded', init);
