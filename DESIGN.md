@@ -16,7 +16,7 @@ The language is **"signal plates on paper"**: the visual vocabulary of Indian pu
 
 - Ground: warm ivory `--paper` `#FAF7F0` / warm black `#121110`; white/`#1B1916` cards; warm ink `--ink` `#171511`/`#F2EFE7`; `--muted` `#5E584A`/`#A49D8E`.
 - Exactly two colors, each with one meaning. **Signal yellow** `--signal` (`#F2B90D`/`#F0B429`) marks identity and highlight moments: the hero kicker plate, the selected city chip, the primary (non-emergency) call card, the "say this" script, and the closing card band. Yellow appears only as an ink-bordered plate with ink text — never as tinted pastel or colored text on light ground. **Emergency red** `--danger` (`#C23430`/`#C63E38`) belongs to 112 alone: the header button, route 1's numeral plate, the danger panel rule, every `tel:112` card.
-- Wayfinding numerals: the four routes carry 44px square plates — route 1 reversed on red, routes 2–4 ink-bordered — with 800-weight tabular digits and a → arrow. Recognition comes from the number and the one red plate, not from four pastel hues.
+- The four routes are one signboard: a single ink-bordered board with ruled rows, like a station direction board. Each row carries a 44px square numeral plate — route 1 reversed on red, routes 2–4 ink-bordered — with 800-weight tabular digits and a → arrow. The active row shows a 3px inset ink bar, and every help panel opens with the same numeral plate beside its kicker, so the number a person pressed visibly continues into the answer.
 - Card physics: `1.5px` visible borders (`--line-bold`, ≥3:1) with a hard offset shadow (`--press`); pressing translates the card down 2px and collapses the shadow, like pushing a printed card. Hairlines (`--line`) only for inner grouping.
 - Structure rules are 2px solid ink: header bottom, after-safe divider, footer top — the document grid.
 - The closing "save the essentials" band **is** the emergency card: signal yellow, ink border, ink-filled primary button. In dark mode it stays yellow — illuminated signage at night.
@@ -24,13 +24,14 @@ The language is **"signal plates on paper"**: the visual vocabulary of Indian pu
 - Form-field borders (`--field-border`) hold ≥3:1 against the field background.
 - Focus: 3px ink ring (paper-white in dark), offset 2px; the yellow band overrides the ring to ink so it never drops below 3:1.
 - Corner radii: 6px controls, 8px numeral plates, 10px rows, 12px panels/band. No blur, no gradients, no glow — flat warm surfaces and crisp edges.
-- `color-scheme` metadata keeps native controls, scrollbars and the browser chrome (`theme-color`, one value per scheme) in step. The favicon is the mark: black अ on an ink-bordered signal-yellow plate.
+- `color-scheme` metadata keeps native controls, scrollbars and the browser chrome (`theme-color`, one value per scheme) in step. The favicon is the mark: black अ on an ink-bordered signal-yellow plate; the same plate sits in the header brand.
 
 ## Typography
 
 - Everything is set in the device's native UI typeface (SF Pro / Roboto / Segoe) for speed, legibility and zero network cost — no remote or bundled fonts, ever. Character comes from weight contrast, not typeface count: 800 numerals, 750 display, 700 labels, 400 body.
 - Display headings are weight 750 with tight tracking (h1 −.02em). The scale stays calm — h1 `clamp(1.75rem … 2.6rem)`, h2 `clamp(1.3rem … 1.65rem)` — so the four pathways, not the headline, dominate the first screen. Kickers are 11px caps at .12em tracking, plate-mounted in the hero.
 - Hindi headings are weight 700, line-height 1.3, letter-spacing 0 (negative Latin tracking is never applied to Devanagari); Hindi body line-height is 1.65 so matras never clip. Uppercase kickers reduce letter-spacing in Hindi.
+- The hero pairs languages like an Indian station board: beneath the headline question, the same question appears in the other language (with a correct `lang` attribute), so a reader of either script orients instantly. The paired line yields on very short screens.
 - Body text is at least 16px. Secondary labels are at least 12px and remain high contrast. Telephone numbers and route numerals are tabular figures at weight 800.
 
 ## Interaction
@@ -56,7 +57,7 @@ The language is **"signal plates on paper"**: the visual vocabulary of Indian pu
 ## Responsive behavior
 
 - Primary test widths: 320px, 360px, 390px and 430px, plus landscape and desktop.
-- The hero is compact by design: label-above chips on mobile, a single reassurance line, no oversized headline. On short portrait screens (≤650px tall) pathway descriptions and the city note hide while labels remain, keeping all four choices within reach.
+- The hero is compact by design: label-above chips on mobile, a single reassurance line, no oversized headline. On short portrait screens (≤650px tall) pathway descriptions, the paired-language line and the city note hide while labels remain, keeping all four choices within reach.
 - On landscape screens, pathways use two columns when space permits.
 - Safe-area insets protect header, footer, status messages and controls on notched devices.
 - Long Hindi strings, email addresses and telephone numbers must wrap without horizontal overflow at every width above.

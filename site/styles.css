@@ -169,15 +169,30 @@ body:not(.ready) *, body:not(.ready) *::before, body:not(.ready) *::after { tran
   min-width: 90px;
   min-height: 44px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: .55rem;
   color: var(--ink);
   text-decoration: none;
   line-height: 1.08;
 }
 .brand:visited { color: var(--ink); }
-.brand strong { font-size: 1rem; font-weight: 750; letter-spacing: -.01em; }
-.brand span { margin-top: .2rem; color: var(--muted); font-size: .72rem; }
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: var(--border-w) solid var(--ink);
+  border-radius: 7px;
+  color: #171511;
+  background: var(--signal);
+  font-size: 1.02rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.brand-text { display: flex; flex-direction: column; justify-content: center; }
+.brand-text strong { font-size: 1rem; font-weight: 750; letter-spacing: -.01em; }
+.brand-text span { margin-top: .2rem; color: var(--muted); font-size: .72rem; }
 .top-actions { display: flex; align-items: center; gap: .4rem; }
 .quiet-button,
 .header-emergency {
@@ -263,7 +278,7 @@ html[lang="hi"] h2 {
   line-height: 1.3;
 }
 html[lang="hi"] .kicker, html[lang="hi"] .city-label { letter-spacing: .05em; }
-.intro { margin: .6rem 0 0; color: var(--muted); font-size: .95rem; }
+.intro { margin: .45rem 0 0; color: var(--muted); font-size: .95rem; font-weight: 500; }
 
 /* ---------- city choice ---------- */
 
@@ -298,7 +313,13 @@ html[lang="hi"] .kicker, html[lang="hi"] .city-label { letter-spacing: .05em; }
 
 /* ---------- the four routes: platform signs ---------- */
 
-.routes { display: grid; gap: .55rem; padding: .7rem 0 1.9rem; }
+.routes {
+  margin: .85rem 0 1.9rem;
+  border: var(--border-w) solid var(--line-bold);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  box-shadow: var(--press-deep);
+}
 .route {
   width: 100%;
   min-height: 70px;
@@ -307,17 +328,18 @@ html[lang="hi"] .kicker, html[lang="hi"] .city-label { letter-spacing: .05em; }
   gap: .8rem;
   align-items: center;
   padding: .7rem .8rem;
-  border: var(--border-w) solid var(--line-bold);
-  border-radius: var(--radius);
+  border: 0;
   color: var(--ink);
   background: var(--card);
-  box-shadow: var(--press);
   text-align: left;
-  transition: border-color var(--duration) ease-out, box-shadow var(--duration) ease-out, transform 90ms ease-out;
+  transition: background-color var(--duration) ease-out;
 }
-.route:hover { border-color: var(--ink); box-shadow: var(--press-deep); }
-.route:active { transform: translateY(2px); box-shadow: none; }
-.route[aria-expanded="true"] { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+.route + .route { border-top: 1px solid var(--line); }
+.route:first-of-type { border-radius: calc(var(--radius-lg) - 2px) calc(var(--radius-lg) - 2px) 0 0; }
+.route:last-of-type { border-radius: 0 0 calc(var(--radius-lg) - 2px) calc(var(--radius-lg) - 2px); }
+.route:hover, .route:active { background: var(--soft); }
+.route:active .route-number { transform: translateY(1px); }
+.route[aria-expanded="true"] { background: var(--soft); box-shadow: inset 3px 0 0 var(--ink); }
 .route-number {
   width: 44px;
   height: 44px;
@@ -330,6 +352,7 @@ html[lang="hi"] .kicker, html[lang="hi"] .city-label { letter-spacing: .05em; }
   font-variant-numeric: tabular-nums;
   color: var(--ink);
   background: var(--card);
+  transition: transform 90ms ease-out;
 }
 .route.danger .route-number { color: var(--on-danger); background: var(--danger); border-color: var(--danger); }
 .route strong, .route small { display: block; }
@@ -351,6 +374,27 @@ html[lang="hi"] .kicker, html[lang="hi"] .city-label { letter-spacing: .05em; }
   scroll-margin-top: calc(70px + env(safe-area-inset-top));
 }
 .danger-panel { border-top-color: var(--danger); }
+.help-panel .kicker { display: flex; align-items: center; gap: .55rem; }
+.help-panel .kicker::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: var(--border-w) solid var(--ink);
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--card);
+  font-size: .92rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+.danger-panel .kicker::before { content: "1"; color: var(--on-danger); background: var(--danger); border-color: var(--danger); }
+.custody-panel .kicker::before { content: "2"; }
+.lawyer-panel .kicker::before { content: "3"; }
+.record-panel .kicker::before { content: "4"; }
 .panel-heading > p:not(.kicker), .form-note { color: var(--muted); }
 .panel-heading > p:not(.kicker) { font-size: .92rem; }
 .form-note { margin: 1rem 0 0; font-size: .88rem; }
@@ -627,8 +671,7 @@ footer small a { min-height: 44px; display: inline-flex; align-items: center; ma
   label.full, .full { grid-column: 1 / -1; }
   .help-panel { padding: 1.6rem; }
   .offline { padding: 1.6rem; }
-  .routes { gap: .65rem; }
-  .route { padding: .85rem 1rem; }
+  .route { padding: .9rem 1rem; }
 }
 
 @media (max-width: 619px) {
@@ -651,10 +694,10 @@ footer small a { min-height: 44px; display: inline-flex; align-items: center; ma
 @media (max-height: 650px) and (max-width: 500px) {
   .hero { padding-top: .7rem; padding-bottom: .2rem; }
   h1 { font-size: 1.55rem; }
-  .intro { margin-top: .4rem; font-size: .9rem; }
+  .intro { display: none; }
   .city-select { margin-top: .6rem; }
   .city-note { display: none; }
-  .routes { gap: .45rem; padding-top: .55rem; }
+  .routes { margin-top: .6rem; }
   .route { min-height: 58px; padding-block: .45rem; }
   .route small { display: none; }
   .route-number { width: 38px; height: 38px; font-size: 1.1rem; }
@@ -663,8 +706,9 @@ footer small a { min-height: 44px; display: inline-flex; align-items: center; ma
 @media (max-height: 600px) and (orientation: landscape) and (min-width: 600px) {
   .hero { padding-top: .9rem; }
   h1 { font-size: 1.7rem; }
-  .routes { grid-template-columns: 1fr 1fr; }
-  .route { min-height: 72px; }
+  .intro { display: none; }
+  .route { min-height: 56px; padding-block: .45rem; }
+  .route small { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -673,7 +717,8 @@ footer small a { min-height: 44px; display: inline-flex; align-items: center; ma
 }
 
 @media (forced-colors: active) {
-  .route, .call-card, .copy-button, .generate-button, .secondary-button, .back-button, .city-chip, details, .route-number, .offline { border: 1px solid ButtonText; }
+  .routes, .call-card, .copy-button, .generate-button, .secondary-button, .back-button, .city-chip, details, .route-number, .brand-mark, .offline { border: 1px solid ButtonText; }
+  .route + .route { border-top: 1px solid ButtonText; }
   .call-card::after, .city-chip[aria-pressed="true"]::before { background: ButtonText; }
 }
 

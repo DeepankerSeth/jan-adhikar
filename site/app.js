@@ -96,6 +96,8 @@ function translatePage() {
     element.textContent = currentLanguage() === 'hi' ? element.dataset.hi : element.dataset.en;
   });
   document.documentElement.lang = currentLanguage() === 'hi' ? 'hi' : 'en';
+  const intro = $('.intro');
+  if (intro) intro.lang = currentLanguage() === 'hi' ? 'en' : 'hi';
   $('#languageToggle').textContent = currentLanguage() === 'hi' ? 'English' : 'हिन्दी';
   $('#languageToggle').setAttribute('aria-label', text('Switch to Hindi', 'अंग्रेज़ी में बदलें'));
   $('#headerEmergency').setAttribute('aria-label', text('Call emergency number 112', 'आपात नंबर 112 पर कॉल करें'));
